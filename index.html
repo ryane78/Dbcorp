@@ -1,28 +1,897 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-PK">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DBcorp</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Architects &amp; House Construction in Islamabad | DBCorp Design Build</title>
+<meta name="description" content="DBCorp designs, approves and builds homes in Islamabad: DHA, Bahria Town, E &amp; F sectors, Gulberg and B-17. Architecture, turnkey construction and interiors. Book a free 10-minute call.">
+<link rel="canonical" href="https://dbcorp.pk/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="geo.region" content="PK-IS"><meta name="geo.placename" content="Islamabad">
+<meta property="og:type" content="website"><meta property="og:site_name" content="DBCorp — Design Build Corporation">
+<meta property="og:title" content="Architects &amp; Home Builders in Islamabad | DBCorp">
+<meta property="og:description" content="One team designs your home, gets it approved, builds it and hands you the keys. Book a free 10-minute call.">
+<meta property="og:url" content="https://dbcorp.pk/"><meta property="og:image" content="https://dbcorp.pk/images/hero.jpg"><meta property="og:image:width" content="2400"><meta property="og:image:height" content="1343">
+<link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
+<link rel="icon" href="images/favicon-32.png?v=2" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png?v=2">
+<meta name="theme-color" content="#FFFFFF">
+<meta property="og:locale" content="en_PK"><meta property="og:image:alt" content="A newly built two-storey brick home in Islamabad by DBCorp"><meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@400;500&display=swap">
+<style>
+/* Single light look, like the Type Five reference. Colours set explicitly. */
+:root{
+  color-scheme:light;
+  --bg:#FFFFFF; --stone:#F4F2EE; --stone-2:#EBE7E0; --ink:#111111; --muted:#6B6A66; --line:#E4E0D9;
+  --head:"Inter Tight","Helvetica Neue",Arial,sans-serif;
+  --body:"Inter","Helvetica Neue",Arial,sans-serif;
+  --r:18px; --wrap:1280px;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+[tabindex="-1"]:focus{outline:none}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(16px,4vw,48px)}
+h1,h2,h3{font-family:var(--head);font-weight:500;letter-spacing:-.025em;line-height:1.05;margin:0;text-wrap:balance}
+h1,.h1{font-size:clamp(2.6rem,6.4vw,5.2rem)}
+.h1{font-family:var(--head);font-weight:500;letter-spacing:-.025em;line-height:1.05;margin:0;text-wrap:balance}
+h1.eyebrow{font-family:var(--body);font-size:.95rem;letter-spacing:.01em;line-height:1.4;color:var(--muted)}
+h2{font-size:clamp(2rem,4.4vw,3.6rem)}
+h3{font-size:1.3rem;letter-spacing:-.01em;line-height:1.25}
+p{margin:0}
+.sub{font-size:clamp(1.05rem,1.5vw,1.3rem);color:var(--muted);line-height:1.5;max-width:44ch}
+.center{text-align:center;margin-inline:auto}
+section{padding-block:clamp(72px,10vw,140px)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:var(--body);font-weight:500;font-size:1rem;padding:.95rem 1.6rem;border-radius:999px;border:1px solid var(--ink);background:var(--ink);color:#fff;text-decoration:none;cursor:pointer;transition:opacity .15s,transform .15s}
+.btn:hover{opacity:.86}
+.btn.light{background:#fff;color:var(--ink);border-color:#fff}
+.btn.line{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.small{padding:.6rem 1.1rem;font-size:.93rem}
+.arrow-link{display:inline-flex;gap:.45rem;align-items:center;font-weight:500;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(12px)}
+.nav .wrap{display:flex;align-items:center;gap:40px;height:72px}
+.logo{display:inline-flex;text-decoration:none}
+.logo img{display:block;width:36px;height:36px}
+footer .logo img{width:48px;height:48px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.nav ul{list-style:none;display:flex;gap:30px;margin:0;padding:0;flex:1}
+.nav ul a{text-decoration:none;font-size:.97rem}
+.nav ul a:hover{color:var(--muted)}
+.nav .right{margin-left:auto;display:flex;gap:10px;align-items:center}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:999px;padding:.55rem 1rem;font:inherit;font-size:.93rem;color:var(--ink);cursor:pointer}
+@media (max-width:900px){
+  .nav ul{display:none;position:absolute;left:0;right:0;top:72px;flex-direction:column;gap:0;background:#fff;padding:8px clamp(16px,4vw,48px) 24px;border-bottom:1px solid var(--line)}
+  .nav ul.open{display:flex}
+  .nav ul a{display:block;padding:12px 0;font-size:1.15rem}
+  .menu-btn{display:inline-block}
+  .nav .right .btn{display:none}
+}
+
+/* photo frames */
+.photo{position:relative;border-radius:var(--r);overflow:hidden;background:var(--stone);width:100%;max-width:100%}
+.photo svg,.photo img{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover}
+
+/* hero */
+.hero{padding-block:clamp(48px,7vw,96px) 0}
+.hero .hero-copy{display:grid;gap:22px;justify-items:center;text-align:center}
+.hero-ctas{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.hero .photo{aspect-ratio:16/8;margin-top:clamp(40px,6vw,72px)}
+@media (max-width:640px){.hero .photo{aspect-ratio:4/5}}
+/* hero photo: a slight lean-back that settles flat, with slow parallax inside. Armed by JS (.tilt) */
+.hero .wrap{perspective:2000px}
+.hero .photo.tilt{transform-origin:50% 100%;transform:rotateX(var(--rx,0deg)) scale(var(--s,1));will-change:transform;
+  box-shadow:0 calc(var(--sh,0) * 30px) calc(var(--sh,0) * 60px) calc(var(--sh,0) * -24px) rgba(0,0,0,.25)}
+.hero .photo.tilt img{transform:scale(1.1) translate3d(0,var(--py,0px),0);will-change:transform}
+
+/* section heads + features */
+.head{display:grid;gap:18px;justify-items:center;text-align:center;margin-bottom:clamp(40px,6vw,72px)}
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(28px,4vw,64px)}
+.feat{display:grid;gap:12px;align-content:start}
+.feat .ic{width:48px;height:48px;border-radius:14px;background:var(--stone);display:grid;place-items:center}
+.feat .ic svg{width:24px;height:24px;stroke:var(--ink);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.feat p{color:var(--muted)}
+@media (max-width:760px){.feats{grid-template-columns:1fr}}
+
+/* testimonials */
+.tq{display:grid;grid-template-columns:repeat(2,1fr);max-width:960px;margin-inline:auto;gap:clamp(16px,2vw,24px)}
+.t{margin:0;background:var(--stone);border-radius:var(--r);padding:clamp(24px,3vw,36px);display:grid;gap:28px;grid-template-rows:1fr auto}
+.t blockquote{margin:0;font-family:var(--head);font-weight:500;font-size:clamp(1.2rem,1.7vw,1.45rem);line-height:1.3;letter-spacing:-.015em}
+.t figcaption{display:flex;justify-content:space-between;align-items:center;gap:16px;border-top:1px solid var(--stone-2);padding-top:18px}
+.t figcaption div{display:grid;gap:2px}
+.t figcaption span{color:var(--muted);font-size:.93rem}
+.watch{display:inline-flex;align-items:center;gap:10px;text-decoration:none;flex:none}
+.watch em{font-style:normal;font-size:.88rem;color:var(--muted);transition:color .2s}
+.watch i{width:44px;height:44px;border-radius:99px;background:var(--ink);display:grid;place-items:center;transition:transform .45s cubic-bezier(.22,1,.36,1)}
+.watch svg{width:18px;height:18px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .45s cubic-bezier(.22,1,.36,1)}
+@media (hover:hover){.watch:hover em{color:var(--ink)}.watch:hover i{transform:scale(1.08)}.watch:hover svg{transform:translate(2px,-2px)}}
+@media (max-width:420px){.watch em{display:none}}
+.fill{color:var(--muted);font-style:italic}
+@media (max-width:700px){.tq{grid-template-columns:1fr}}
+
+/* how it works: route map */
+.how{background:var(--stone)}
+.journey{border-radius:var(--r);overflow:hidden;background-color:#fff;background-image:linear-gradient(var(--stone) 1px,transparent 1px),linear-gradient(90deg,var(--stone) 1px,transparent 1px);background-size:32px 32px}
+.jmap{position:relative;margin:clamp(28px,4vw,48px) clamp(28px,5vw,64px) 0}
+.jmap svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.leg{fill:none;stroke:#B9B3A8;stroke-width:2;stroke-dasharray:2 7;stroke-linecap:round;vector-effect:non-scaling-stroke;transition:stroke .3s}
+.leg.done{stroke:var(--ink);stroke-width:3;stroke-dasharray:none}
+.pin{position:absolute;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:99px;border:2px solid var(--ink);background:#fff;color:var(--ink);font:600 .95rem var(--body);cursor:pointer;padding:0;transition:background .2s,color .2s,box-shadow .2s}
+.pin.done,.pin[aria-current="step"]{background:var(--ink);color:#fff}
+.pin[aria-current="step"]{box-shadow:0 0 0 7px rgba(17,17,17,.12)}
+.pin .pl{position:absolute;width:120px;left:50%;transform:translateX(-50%);font:500 .84rem/1.25 var(--body);color:var(--ink);text-align:center}
+.pin .pl.below{top:calc(100% + 10px)}
+.pin .pl.above{bottom:calc(100% + 10px)}
+.pin .pl.right{left:calc(100% + 12px);top:50%;transform:translateY(-50%);text-align:left}
+.pin .pl.left{left:auto;right:calc(100% + 12px);top:50%;transform:translateY(-50%);text-align:right}
+.pin .pl em{display:block;font-style:normal;font-size:.72rem;color:var(--muted)}
+.jcard{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(24px,4vw,56px);align-items:start;margin-top:clamp(24px,3vw,40px);padding:clamp(24px,3.5vw,44px);background:#fff;border-top:1px solid var(--line)}
+.jcard .info{display:grid;gap:14px;align-content:start}
+.jcard .step{font-size:.9rem;color:var(--muted)}
+.jcard h3{font-size:clamp(1.6rem,2.8vw,2.2rem);letter-spacing:-.02em;line-height:1.1}
+.jcard .desc{color:var(--muted);font-size:1.04rem;max-width:46ch}
+.kv{display:grid;gap:0;border-top:1px solid var(--line)}
+.kv div{display:grid;grid-template-columns:110px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);font-size:.97rem}
+.kv span{color:var(--muted)}
+.stage-nav{display:flex;gap:10px;align-items:center;margin-top:6px;flex-wrap:wrap}
+.round{width:46px;height:46px;border-radius:99px;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:1.1rem;color:var(--ink)}
+.round:disabled{opacity:.35;cursor:default}
+@media (max-width:760px){.jcard{grid-template-columns:1fr}}
+
+/* services */
+.svc-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(32px,5vw,56px)}
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2vw,24px)}
+.svc a{display:grid;gap:14px;text-decoration:none;align-content:start;transition:transform .6s cubic-bezier(.22,1,.36,1)}
+.svc .photo{transition:box-shadow .6s cubic-bezier(.22,1,.36,1)}
+.svc .photo img{transition:transform 1.4s cubic-bezier(.22,1,.36,1)}
+.svc h3{transition:transform .6s cubic-bezier(.22,1,.36,1)}
+@media (hover:hover){
+  .svc a:hover{transform:translateY(-6px)}
+  .svc a:hover .photo{box-shadow:0 22px 40px -24px rgba(0,0,0,.35)}
+  .svc a:hover .photo img{transform:scale(1.06)}
+  .svc a:hover h3{transform:translateX(4px)}
+}
+/* staggered reveal: only armed once JS adds .reveal, so content never hides without JS */
+.svc.reveal a{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.22,1,.36,1) var(--d,0s),transform .9s cubic-bezier(.22,1,.36,1) var(--d,0s)}
+.svc.reveal a .photo img{transform:scale(1.12)}
+.svc.reveal.in a{opacity:1;transform:none}
+.svc.reveal.in a .photo img{transform:scale(1);transition-delay:var(--d,0s)}
+@media (hover:hover){.svc.reveal.in a:hover{transform:translateY(-6px);transition-delay:0s}.svc.reveal.in a:hover .photo img{transform:scale(1.06);transition-delay:0s}}
+.svc .photo{aspect-ratio:3/4}
+.svc p{color:var(--muted);font-size:.95rem}
+@media (max-width:960px){.svc{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.svc{grid-template-columns:1fr}.svc .photo{aspect-ratio:4/3}}
+
+/* guides */
+.guides{background:var(--stone)}
+.g-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,24px)}
+@media (max-width:960px){.g-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.g-grid{grid-template-columns:1fr}}
+.g{background:#fff;border-radius:var(--r);padding:14px 14px 22px;display:grid;gap:14px;grid-template-rows:auto auto 1fr auto}
+.g .cover{aspect-ratio:3/2;border-radius:12px;background:var(--stone);display:grid;place-items:center;overflow:hidden}
+.g .doc{width:42%;aspect-ratio:1/1.414;background:#fff;border-radius:4px;box-shadow:0 10px 24px rgba(0,0,0,.08);padding:12% 10%;display:grid;align-content:space-between}
+.g .doc b{font-family:var(--head);font-weight:600;font-size:.72rem;line-height:1.15;letter-spacing:-.01em}
+.g .doc i{display:block;height:3px;background:var(--stone-2);border-radius:2px;margin-top:4px}
+.g .doc small{font-size:.5rem;color:var(--muted);letter-spacing:.04em}
+.g .meta{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);padding-inline:8px}
+.g .body{display:grid;gap:6px;padding-inline:8px;align-content:start}
+.g .body p{color:var(--muted);font-size:.95rem}
+.g .btn{margin-inline:8px;justify-self:start}
+
+/* faq */
+.faq{display:grid;grid-template-columns:1fr 1.5fr;gap:clamp(32px,6vw,96px)}
+@media (max-width:860px){.faq{grid-template-columns:1fr}}
+details{border-top:1px solid var(--line);padding:22px 0}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;font-weight:500;font-size:1.08rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--muted);flex:none}
+details[open] summary::after{content:"−"}
+details p{color:var(--muted);margin-top:12px;max-width:60ch}
+/* faq motion: armed only once JS adds .faq-anim, so answers never hide without JS */
+#faq.faq-anim details summary::after{content:"+";transition:transform .55s cubic-bezier(.22,1,.36,1)}
+#faq.faq-anim details.on summary::after{transform:rotate(45deg)}
+#faq.faq-anim details p{transition:opacity .45s ease .08s,transform .6s cubic-bezier(.22,1,.36,1) .04s}
+#faq.faq-anim details:not(.on) p{opacity:0;transform:translateY(-8px)}
+#faq.faq-anim summary{transition:color .2s}
+@media (hover:hover){#faq.faq-anim summary:hover{color:var(--muted)}}
+#faq.faq-anim.reveal details{opacity:0;transform:translateY(18px);transition:opacity .8s cubic-bezier(.22,1,.36,1) var(--d,0s),transform .8s cubic-bezier(.22,1,.36,1) var(--d,0s)}
+#faq.faq-anim.reveal.in details{opacity:1;transform:none}
+
+/* booking */
+/* statement over photo */
+.statement{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:16/8;display:flex;align-items:flex-end}
+.statement::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 20%,rgba(0,0,0,.65))}
+.statement .over{position:relative;z-index:1;padding:clamp(22px,4vw,56px);display:grid;gap:22px;color:#fff;max-width:900px}
+.statement h2{font-size:clamp(1.7rem,3.6vw,3rem)}
+@media (max-width:700px){.statement{aspect-ratio:4/5}}
+.final .statement{aspect-ratio:auto;min-height:420px}
+.final .statement::after{background:linear-gradient(90deg,rgba(0,0,0,.6),rgba(0,0,0,.1))}
+.book-card{background:#fff;color:var(--ink);border-radius:var(--r);padding:clamp(22px,3vw,32px);display:grid;gap:14px}
+.book-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:start;margin-top:clamp(40px,6vw,64px)}
+@media (max-width:900px){.book-grid{grid-template-columns:1fr}}
+.contact{display:grid;gap:0}
+.contact div{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.contact div:first-child{border-top:1px solid var(--line)}
+.contact span{color:var(--muted);font-size:.9rem}
+.contact strong{font-weight:500;user-select:all}
+.contact a{text-decoration:none}
+.contact a:hover strong{text-decoration:underline}
+.checks{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.checks li{display:flex;gap:10px}
+.checks li::before{content:"✓";font-weight:600}
+
+/* forms */
+form{display:grid;gap:14px}
+.field{display:grid;gap:6px}
+.field label{font-size:.88rem;font-weight:500}
+.hint{font-size:.8rem;color:var(--muted)}
+input,select{font:inherit;font-size:1rem;color:var(--ink);background:var(--stone);border:1px solid transparent;border-radius:12px;padding:.8rem .9rem;width:100%}
+input:focus,select:focus{outline:2px solid var(--ink);outline-offset:0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:520px){.two{grid-template-columns:1fr}}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:.88rem;color:var(--muted)}
+.check input{width:auto;margin-top:4px}
+.err{color:#B3261E;font-size:.87rem}
+.note{font-size:.82rem;color:var(--muted)}
+#calendar{scroll-margin-top:96px}
+#calendly{width:100%;min-width:0;height:700px;border-radius:calc(var(--r) - 4px);overflow:hidden;background:#fff}
+@media (max-width:600px){#calendly{height:760px}}
+.ok{width:52px;height:52px;border-radius:99px;background:var(--stone);display:grid;place-items:center;font-size:1.4rem}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:16px;background:rgba(17,17,17,.45)}
+.dialog{width:min(500px,100%);max-height:calc(100% - 32px);overflow:auto;background:#fff;border-radius:22px;padding:clamp(22px,4vw,32px);display:grid;gap:18px}
+.dialog .top{display:flex;justify-content:space-between;gap:12px;align-items:start}
+.x{background:var(--stone);border:0;border-radius:99px;width:38px;height:38px;font-size:1.2rem;cursor:pointer;flex:none;color:var(--ink)}
+.bars{display:flex;gap:6px}.bars i{flex:1;height:3px;border-radius:3px;background:var(--line)}.bars i.on{background:var(--ink)}
+
+/* footer */
+footer{background:var(--stone);padding-block:64px 40px}
+.foot{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:32px}
+.foot h4{font-size:.85rem;font-weight:500;color:var(--muted);margin:0 0 14px}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.foot a{text-decoration:none;font-size:.95rem}
+.foot a:hover{color:var(--muted)}
+.tag{font-family:var(--head);font-size:1.5rem;font-weight:500;letter-spacing:-.02em;line-height:1.2;max-width:18ch;margin-top:18px}
+.legal{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:56px;padding-top:22px;border-top:1px solid var(--stone-2);font-size:.85rem;color:var(--muted)}
+@media (max-width:960px){.foot{grid-template-columns:1fr 1fr}.foot>div:first-child{grid-column:1/-1}}
+
+.mcta{display:none}
+@media (max-width:760px){
+  .mcta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(255,255,255,.95);border-top:1px solid var(--line)}
+  .mcta .btn{flex:1;padding:.8rem 1rem}
+  footer{padding-bottom:110px}
+}
+</style>
+
+<!-- Structured data for Google + AI search. -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": [
+  "GeneralContractor",
+  "ProfessionalService"
+ ],
+ "name": "DBCorp — Design Build Corporation",
+ "alternateName": "DBCorp",
+ "url": "https://dbcorp.pk/",
+ "image": "https://dbcorp.pk/images/hero.jpg",
+ "logo": "https://dbcorp.pk/images/logo-512.png",
+ "description": "Design-build firm in Islamabad: architecture, approvals, turnkey house construction, luxury interiors, grey structure and renovation. One team from plot to keys.",
+ "telephone": "+92-313-555-8245",
+ "email": "arumermasud@gmail.com",
+ "address": {
+  "@type": "PostalAddress",
+  "addressLocality": "Islamabad",
+  "addressRegion": "Islamabad Capital Territory",
+  "addressCountry": "PK"
+ },
+ "areaServed": [
+  {
+   "@type": "City",
+   "name": "Islamabad"
+  },
+  {
+   "@type": "City",
+   "name": "Rawalpindi"
+  },
+  {
+   "@type": "City",
+   "name": "Lahore"
+  },
+  {
+   "@type": "City",
+   "name": "Karachi"
+  },
+  {
+   "@type": "Place",
+   "name": "DHA Islamabad"
+  },
+  {
+   "@type": "Place",
+   "name": "Bahria Town Islamabad"
+  },
+  {
+   "@type": "Place",
+   "name": "Gulberg Greens"
+  },
+  {
+   "@type": "Place",
+   "name": "B-17 Multi Gardens"
+  }
+ ],
+ "knowsAbout": [
+  "Residential architecture",
+  "House construction",
+  "Turnkey construction",
+  "Interior design",
+  "Grey structure construction",
+  "Home renovation",
+  "Building approvals in Islamabad"
+ ],
+ "sameAs": [
+  "https://www.instagram.com/dbcorp.pk/"
+ ],
+ "@id": "https://dbcorp.pk/#business",
+ "contactPoint": {
+  "@type": "ContactPoint",
+  "telephone": "+92-313-555-8245",
+  "contactType": "customer service",
+  "areaServed": "PK",
+  "availableLanguage": [
+   "English",
+   "Urdu"
+  ]
+ },
+ "hasOfferCatalog": {
+  "@type": "OfferCatalog",
+  "name": "Design and build services",
+  "itemListElement": [
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Architecture and design",
+     "description": "Bespoke house design from 10 marla to multi-kanal, drawn to the plot and the society's rules, with 3D renders.",
+     "areaServed": "Islamabad"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Building plan approvals",
+     "description": "Drawings prepared and submitted to CDA, DHA, Bahria Town or the governing society.",
+     "areaServed": "Islamabad"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Turnkey house construction",
+     "description": "Complete construction from foundation to finishes under one contract, with stage-linked payments.",
+     "areaServed": "Islamabad"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Luxury interiors",
+     "description": "Stone, millwork and lighting specified and installed by the same team.",
+     "areaServed": "Islamabad"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Grey structure and renovation",
+     "description": "Structural works and home renovations held to new-build standard.",
+     "areaServed": "Islamabad"
+    }
+   }
+  ]
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "@id": "https://dbcorp.pk/#website",
+ "name": "DBCorp — Design Build Corporation",
+ "alternateName": "DBCorp",
+ "url": "https://dbcorp.pk/",
+ "inLanguage": "en-PK",
+ "publisher": {
+  "@id": "https://dbcorp.pk/#business"
+ }
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Who designs and builds houses in Islamabad?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "DBCorp (Design Build Corporation) is a design-build firm in Islamabad. One team handles architecture, approvals, construction and interiors, from an empty plot to handing over the keys."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What does design-build mean?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "One firm both designs and builds your house under one contract. You deal with one team instead of an architect, a contractor and an interior designer separately, and nobody can blame someone else for a problem."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do you handle approvals from CDA, DHA and Bahria Town?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. We prepare the drawings and manage the submission to the authority that governs your plot."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can you build a 10 marla or 1 kanal house?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. We design and build homes from 10 marla plots up to multi-kanal estates."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How much does it cost to build a house in Islamabad?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It depends on plot size, covered area, your society's rules and the finish level you choose. Try our construction cost calculator for a quick estimate, or get a realistic range for your plot on the free 10-minute call."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is the difference between grey structure and turnkey construction?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Grey structure is the foundation, columns, beams, slabs, brickwork, plaster and concealed pipes. Turnkey adds everything after that: flooring, doors and windows, bathrooms, kitchen, electrical fittings, paint and woodwork, so the house is ready to move into. We do both."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Which approvals do I need to build a house in Islamabad?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Your building plan (the map) must be approved before construction starts, by the authority that governs your plot: CDA for sectors such as E, F, G and I, or the society itself in DHA, Bahria Town and most private housing schemes. When the house is finished you apply for a completion certificate. We prepare the drawings and handle the submission."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "I live abroad. Can you build my house?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. One firm and one contract means one point of contact, and you can follow every stage of the build from wherever you are."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do you work outside Islamabad?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "We're based in Islamabad and also build in Rawalpindi, Lahore and Karachi."
+   }
+  }
+ ]
+}
+</script>
+
 </head>
 <body>
-  <header>
-    <h1>DBcorp</h1>
-    <p>Welcome to the site.</p>
-  </header>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top"><img src="images/logo.svg" width="61" height="61" alt=""><span class="sr-only">DBCorp, home</span></a>
+    <ul id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#stories">Clients</a></li>
+      <li><a href="construction-cost-calculator.html">Cost calculator</a></li>
+      <li><a href="#guides">Free guides</a></li>
+    </ul>
+    <div class="right">
+      <a class="btn small" href="#calendar">Book a call</a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Menu</button>
+    </div>
+  </div>
+</header>
 
-  <main>
-    <section>
-      <h2>About</h2>
-      <p>This is where your content goes. Edit index.html to get started.</p>
-    </section>
-  </main>
+<main id="top">
 
-  <footer>
-    <p>&copy; 2026 DBcorp</p>
-  </footer>
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <h1 class="eyebrow">Architects and house builders in Islamabad</h1>
+      <p class="h1">A home for you and yours.<br>Drawn once, built right.</p>
+      <p class="sub center">We design your house, get it approved, build it and hand you the keys. One team in Islamabad, from empty plot to move-in day.</p>
+      <div class="hero-ctas"><a class="btn" href="#calendar">Book a free call</a><a class="btn line" href="#how">See how it works</a></div>
+    </div>
+    <div class="photo"><img src="images/hero.jpg" width="2400" height="1343" alt="A newly built two-storey home with exposed brick, cream mouldings, a wrought-iron balcony and gate" style="object-position:50% 60%" fetchpriority="high"></div>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<section id="why">
+  <div class="wrap">
+    <div class="head">
+      <h2>Reshaping the way Islamabad builds homes.</h2>
+      <p class="sub center">Most houses go wrong in the gap between the architect and the contractor. We closed it. The people who draw your home are the people who build it.</p>
+    </div>
+    <div class="feats">
+      <div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20h16M6 20V9l6-5 6 5v11"/><path d="M10 20v-6h4v6"/></svg></div><h3>Designed around your family</h3><p>Every home starts from how you live. From 10 marla to multi-kanal, drawn to your plot and your society's rules.</p></div>
+      <div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div><h3>Built without the chaos</h3><p>One team owns the schedule, the labour and the material grades. You get updates, not excuses.</p></div>
+      <div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 10h8M8 14h5"/></svg></div><h3>Priced before we pour</h3><p>You see the design, the materials and the quote before a single brick is laid. Payments follow the stages of the build.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="stories" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <h2>In our clients' words.</h2>
+    </div>
+    <div class="tq">
+      <figure class="t">
+        <blockquote>“The home honestly turned out better than we expected.”</blockquote>
+        <figcaption><div><strong>Kinza Atif</strong><span>Park Enclave</span></div><a class="watch" href="https://www.instagram.com/reel/DR4rSLqiKGC/" target="_blank" rel="noopener" aria-label="Watch Kinza Atif's full video testimonial on Instagram"><em>Watch the video</em><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></i></a></figcaption>
+      </figure>
+      <figure class="t">
+        <blockquote>“The team has been super cooperative throughout the process.”</blockquote>
+        <figcaption><div><strong>Mr. Ahmed</strong><span>Top City</span></div><a class="watch" href="https://www.instagram.com/reel/DOBm8XuiOh-/" target="_blank" rel="noopener" aria-label="Watch Mr. Ahmed's full video testimonial on Instagram"><em>Watch the video</em><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></i></a></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="how">
+  <div class="wrap">
+    <div class="head">
+      <h2>How it works with us.</h2>
+      <p class="sub center">Eight stops from empty plot to keys. Tap any stop on the route to see what happens there.</p>
+    </div>
+    <div class="journey">
+      <div class="jmap" id="jmap"></div>
+      <div class="jcard" id="jcard" aria-live="polite">
+        <ol>
+          <li><strong>We meet on your plot.</strong> We walk the plot with you: sun, access, levels, neighbours and your society&#x27;s rules for your street.</li>
+          <li><strong>We discuss your needs.</strong> Room by room, we write down how your family lives now and how you want to live in this house.</li>
+          <li><strong>We design it and render it.</strong> Your ideas become floor plans and a 3D render of your home, so you can see it before it exists and share it with family.</li>
+          <li><strong>Drawings and approvals.</strong> Architecture, structure and services are drawn in full and submitted to CDA, DHA or Bahria. Ink before concrete.</li>
+          <li><strong>One quote, one contract.</strong> Priced against the approved drawings with material grades written in. Payments are tied to stages, so you always know what you are paying for.</li>
+          <li><strong>The bones go up.</strong> Foundation, columns and slabs. A-grade steel and zero cut corners.</li>
+          <li><strong>Finishes and interiors.</strong> Glazing, stone, millwork and light, specified to the millimetre and installed to the millimetre.</li>
+          <li><strong>Welcome home.</strong> A final walk-through together, every snag closed, and the keys change hands. You live here now.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="svc-head">
+      <h2 style="max-width:14ch">You dream it, we build it.</h2>
+      <p class="sub">Take the whole journey with us, or bring us in for the part you need.</p>
+    </div>
+    <div class="svc">
+      <a href="#book"><div class="photo"><img src="images/svc-architecture.jpg" alt="Architectural floor plans and elevation drawings spread across a desk" loading="lazy"></div><h3>Architecture &amp; design</h3><p>Bespoke homes from 10 marla to multi-kanal. Drawn once, drawn right, approved without drama.</p></a>
+      <a href="#book"><div class="photo"><img src="images/svc-turnkey.jpg" alt="Stone-clad home with wrought-iron balconies and lanterns" loading="lazy"></div><h3>Turnkey construction</h3><p>We own the schedule, the labour, the material grades and the outcome. You own the house.</p></a>
+      <a href="#book"><div class="photo"><img src="images/svc-interiors.jpg" alt="Executive office with marble floors, lit walnut shelving and leather seating" loading="lazy"></div><h3>Luxury interiors</h3><p>Imported stone, custom millwork and lighting, specified to the market's ceiling, not its average.</p></a>
+      <a href="#book"><div class="photo"><img src="images/svc-grey-structure.jpg" alt="Building facade under scaffolding during construction" loading="lazy"></div><h3>Grey structure &amp; renovation</h3><p>Structural work and transformations held to new-build standard. Nothing hides behind our plaster.</p></a>
+    </div>
+  </div>
+</section>
+
+<section id="guides" class="guides">
+  <div class="wrap">
+    <div class="head">
+      <h2>Free guides for building in Islamabad.</h2>
+      <p class="sub center">Checklists and rule books we wish every client had before they called us. Free to use, whether or not you build with us.</p>
+    </div>
+    <div class="g-grid" id="gGrid">
+      <article class="g"><div class="body"><h3>Before You Build</h3><p>The decisions to settle before you meet any architect, so the first meeting moves your house forward.</p></div></article>
+      <article class="g"><div class="body"><h3>Islamabad Layout Guide</h3><p>What realistically fits on a 5 marla, 10 marla and 1 kanal plot, with sample layouts.</p></div></article>
+      <article class="g"><div class="body"><h3>Material Grades Rulebook</h3><p>Steel, cement, bricks and concrete: what the grades mean and what to check on site.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="book" class="final">
+  <div class="wrap">
+    <div class="statement">
+      <div class="photo" style="position:absolute;inset:0;border-radius:0"><img src="images/book-banner.jpg" alt="A modern home lit up at night, with a glass balcony and warm wall lights" loading="lazy"></div>
+      <div class="over" style="align-self:center">
+        <h2>Ease into a home that was designed for you.</h2>
+        <p style="font-size:1.15rem;opacity:.85;max-width:40ch">Book a free 10-minute call to talk through your plot, our process and pricing.</p>
+      </div>
+    </div>
+    <div class="book-grid">
+      <div style="display:grid;gap:24px;align-content:start">
+        <h3 style="font-size:1.7rem;font-family:var(--head);font-weight:500;letter-spacing:-.02em">What you get on the call</h3>
+        <ul class="checks">
+          <li>An honest view of what fits your plot</li>
+          <li>A realistic budget range</li>
+          <li>A clear next step, even if it's "don't build yet"</li>
+        </ul>
+        <div class="contact">
+          <div><span>Text or call</span><a href="tel:+923135558245"><strong>0313 555 8245</strong></a></div>
+          <div><span>Email</span><a href="mailto:arumermasud@gmail.com"><strong>arumermasud@gmail.com</strong></a></div>
+          <div><span>Instagram</span><a href="https://www.instagram.com/dbcorp.pk/" target="_blank" rel="noopener">@dbcorp.pk ↗</a></div>
+        </div>
+      </div>
+      <div class="book-card" id="calendar" style="background:var(--stone)">
+        <div id="calWrap" hidden style="display:grid;gap:12px">
+          <div id="calendly"></div>
+          <p class="note">Can't find a time that works? <a href="#book" id="toWa">Send us your details on WhatsApp instead</a>.</p>
+        </div>
+        <div id="bookForm">
+          <form id="bForm" novalidate>
+            <div class="two">
+              <div class="field"><label for="b-name">Your name</label><input id="b-name" autocomplete="name" style="background:#fff"></div>
+              <div class="field"><label for="b-phone">WhatsApp number</label><input id="b-phone" type="tel" inputmode="tel" placeholder="03xx xxx xxxx" style="background:#fff"></div>
+            </div>
+            <div class="two">
+              <div class="field"><label for="b-area">Where is the plot?</label><select id="b-area" style="background:#fff"><option>DHA Islamabad</option><option>Bahria Town</option><option>E / F sectors</option><option>Gulberg Greens</option><option>B-17</option><option>G / I sectors</option><option>Rawalpindi</option><option>Lahore</option><option>Karachi</option><option>Not bought yet</option></select></div>
+              <div class="field"><label for="b-size">Plot size</label><select id="b-size" style="background:#fff"><option>5 marla</option><option selected>10 marla</option><option>1 kanal</option><option>2 kanal +</option><option>Not sure yet</option></select></div>
+            </div>
+            <div class="two">
+              <div class="field"><label for="b-need">What do you need?</label><select id="b-need" style="background:#fff"><option>Design and build</option><option>Design only</option><option>Construction only</option><option>Interiors</option><option>Grey structure / renovation</option></select></div>
+              <div class="field"><label for="b-time">Best time to call</label><select id="b-time" style="background:#fff"><option>Morning</option><option>Afternoon</option><option>Evening</option><option>I'm abroad, let's arrange</option></select></div>
+            </div>
+            <p class="err" id="bErr" hidden>Add your name and a WhatsApp number so we can reach you.</p>
+            <button class="btn" type="submit">Book a free call</button>
+            <p class="note">Your request opens in WhatsApp, ready to send. We reply within one working day.</p>
+            <p class="note" id="toCalRow" hidden><a href="#book" id="toCal">Or pick a time on our calendar</a>.</p>
+          </form>
+        </div>
+        <div id="bookDone" hidden style="display:grid;gap:14px">
+          <div class="ok">✓</div>
+          <h3>One last tap.</h3>
+          <p style="color:var(--muted)">Your message is written. Open WhatsApp and press send.</p>
+          <a class="btn" id="waLink" href="https://wa.me/923135558245" target="_blank" rel="noopener">Open WhatsApp</a>
+          <button class="btn line small" id="bAgain" style="justify-self:start">Edit details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:0">
+  <div class="wrap faq">
+    <div style="display:grid;gap:18px;align-content:start"><h2>Frequently asked questions</h2><p class="sub">Anything else, ask us on the free call.</p></div>
+    <div>
+      <details open><summary>Who designs and builds houses in Islamabad?</summary><p>DBCorp (Design Build Corporation) is a design-build firm in Islamabad. One team handles architecture, approvals, construction and interiors, from an empty plot to handing over the keys.</p></details>
+      <details><summary>What does design-build mean?</summary><p>One firm both designs and builds your house under one contract. You deal with one team instead of an architect, a contractor and an interior designer separately, and nobody can blame someone else for a problem.</p></details>
+      <details><summary>Do you handle approvals from CDA, DHA and Bahria Town?</summary><p>Yes. We prepare the drawings and manage the submission to the authority that governs your plot.</p></details>
+      <details><summary>Can you build a 10 marla or 1 kanal house?</summary><p>Yes. We design and build homes from 10 marla plots up to multi-kanal estates.</p></details>
+      <details><summary>How much does it cost to build a house in Islamabad?</summary><p>It depends on plot size, covered area, your society's rules and the finish level you choose. Try our <a href="construction-cost-calculator.html">construction cost calculator</a> for a quick estimate, or get a realistic range for your plot on the free 10-minute call.</p></details>
+      <details><summary>What is the difference between grey structure and turnkey construction?</summary><p>Grey structure is the foundation, columns, beams, slabs, brickwork, plaster and concealed pipes. Turnkey adds everything after that: flooring, doors and windows, bathrooms, kitchen, electrical fittings, paint and woodwork, so the house is ready to move into. We do both.</p></details>
+      <details><summary>Which approvals do I need to build a house in Islamabad?</summary><p>Your building plan (the map) must be approved before construction starts, by the authority that governs your plot: CDA for sectors such as E, F, G and I, or the society itself in DHA, Bahria Town and most private housing schemes. When the house is finished you apply for a completion certificate. We prepare the drawings and handle the submission.</p></details>
+      <details><summary>I live abroad. Can you build my house?</summary><p>Yes. One firm and one contract means one point of contact, and you can follow every stage of the build from wherever you are.</p></details>
+      <details><summary>Do you work outside Islamabad?</summary><p>We're based in Islamabad and also build in Rawalpindi, Lahore and Karachi.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><a class="logo" href="#top"><img src="images/logo.svg" width="61" height="61" alt=""><span class="sr-only">DBCorp, home</span></a><p class="tag">We're building the next generation of homes in Pakistan.</p><p style="color:var(--muted);margin-top:14px;font-size:.92rem;max-width:44ch">DBCorp (Design Build Corporation) is a design-build firm in Islamabad, Pakistan. One team designs houses, gets them approved, builds them and finishes the interiors, in DHA, Bahria Town, CDA sectors, Gulberg Greens and B-17, and in Rawalpindi, Lahore and Karachi.</p></div>
+      <div><h4>Services</h4><ul><li><a href="#services">Architecture</a></li><li><a href="#services">Construction</a></li><li><a href="#services">Interiors</a></li><li><a href="#services">Renovation</a></li></ul></div>
+      <div><h4>Resources</h4><ul><li><a href="construction-cost-calculator.html">Cost calculator</a></li><li><a href="#how">How it works</a></li><li><a href="#stories">Client stories</a></li><li><a href="#guides">Free guides</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><span style="color:var(--muted);font-size:.85rem">Text or call</span></li><li>0313 555 8245</li><li><a href="https://www.instagram.com/dbcorp.pk/" target="_blank" rel="noopener">Instagram ↗</a></li></ul></div>
+    </div>
+    <div class="legal"><span>© 2026 DBCorp — Design Build Corporation</span><span>Drawn, checked and built by the same hands</span></div>
+  </div>
+</footer>
+
+<div class="mcta"><a class="btn line" href="https://wa.me/923135558245" target="_blank" rel="noopener">WhatsApp</a><a class="btn" href="#calendar">Book a call</a></div>
+
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="dialog">
+    <div class="top"><div style="display:grid;gap:4px"><span class="note" id="mKind">Free guide</span><h3 id="mTitle" style="font-size:1.5rem;font-family:var(--head);font-weight:500">Guide</h3></div><button class="x" id="mClose" aria-label="Close">×</button></div>
+    <div class="bars"><i class="on"></i><i id="bar2"></i></div>
+    <div id="m1">
+      <form id="dForm" novalidate>
+        <p style="color:var(--muted);font-size:.95rem">Tell us where to send a copy. Your download starts straight away.</p>
+        <div class="field"><label for="d-name">Your name</label><input id="d-name" autocomplete="name"></div>
+        <div class="field"><label for="d-contact">Email or WhatsApp number</label><input id="d-contact"><span class="hint">A copy goes here, plus the occasional building tip. Nothing else.</span></div>
+        <div class="field"><label for="d-stage">Where are you in your build?</label><select id="d-stage"><option>Planning to build this year</option><option>Planning to build next year</option><option>Construction already started</option><option>Just learning</option></select></div>
+        <label class="check"><input type="checkbox" id="d-ok" checked> Send me DBCorp's building tips. Unsubscribe any time.</label>
+        <p class="err" id="dErr" hidden>Add your name and an email or WhatsApp number.</p>
+        <button class="btn" type="submit">Get the free guide</button>
+      </form>
+    </div>
+    <div id="m2" hidden style="display:grid;gap:14px">
+      <div class="ok">↓</div>
+      <h3 style="font-size:1.4rem">Your guide is ready.</h3>
+      <p style="color:var(--muted)" id="mDone">Download it now.</p>
+      <button class="btn" id="mDownload">Download PDF</button>
+      <p class="note" id="mPrev" hidden>Preview only: on the live site this button downloads the file.</p>
+      <div style="border-top:1px solid var(--line);padding-top:16px;display:grid;gap:10px">
+        <p style="font-weight:500">Want us to apply it to your plot?</p>
+        <a class="btn line small" href="#calendar" id="mBook" style="justify-self:start">Book a free call</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const WA="923135558245";
+const CALENDLY_URL="https://calendly.com/rayanrasheed03/new-meeting"; // your Calendly event link, e.g. https://calendly.com/dbcorp/10min
+const LEAD_ENDPOINT=""; // set to a Formspree / Google Apps Script URL at launch
+
+/* ---------- Service cards: staggered reveal ---------- */
+(()=>{const g=document.querySelector('.svc');if(!g||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  g.querySelectorAll('a').forEach((a,i)=>a.style.setProperty('--d',i*.12+'s'));g.classList.add('reveal');
+  const io=new IntersectionObserver(e=>{if(e[0].isIntersecting){g.classList.add('in');io.disconnect();
+    setTimeout(()=>g.querySelectorAll('a').forEach(a=>a.style.removeProperty('--d')),1600)}},{threshold:.15});io.observe(g)})();
+
+/* ---------- Hero photo: settles from a slight lean as you scroll, image drifts slower than the page ---------- */
+(()=>{const ph=document.querySelector('.hero .photo');if(!ph||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  ph.classList.add('tilt');let goal=0,cur=null,raf=0;
+  const read=()=>{const r=ph.getBoundingClientRect(),vh=innerHeight;goal=Math.min(1,Math.max(0,(vh-r.top)/(vh*.8)))}; // 0 entering, 1 well in view
+  const tick=()=>{raf=0;cur=cur===null?goal:cur+(goal-cur)*.1; // soft follow, never a jump
+    const r=ph.getBoundingClientRect();
+    ph.style.setProperty('--rx',((1-cur)*8).toFixed(2)+'deg');ph.style.setProperty('--s',(.96+.04*cur).toFixed(4));
+    ph.style.setProperty('--sh',(1-cur).toFixed(3));ph.style.setProperty('--py',Math.max(-24,Math.min(24,r.top*-.05)).toFixed(1)+'px');
+    if(Math.abs(goal-cur)>.001)raf=requestAnimationFrame(tick)};
+  const kick=()=>{read();if(!raf)raf=requestAnimationFrame(tick)};
+  addEventListener('scroll',kick,{passive:true});addEventListener('resize',kick);kick()})();
+
+/* ---------- Smooth anchor scrolling ---------- */
+(()=>{if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  const root=document.documentElement;
+  const ease=t=>t<.5?8*t**4:1-Math.pow(-2*t+2,4)/2; // easeInOutQuart: gentle start, long soft landing
+  let raf=0,stop=null;
+  function glide(y){cancelAnimationFrame(raf);if(stop)stop();
+    const y0=scrollY,d=Math.max(0,Math.min(y,root.scrollHeight-innerHeight))-y0;if(Math.abs(d)<2)return;
+    const dur=Math.min(1500,600+Math.sqrt(Math.abs(d))*13),t0=performance.now();
+    root.style.scrollBehavior='auto';
+    const cancel=()=>{cancelAnimationFrame(raf);done()},done=()=>{root.style.scrollBehavior='';removeEventListener('wheel',cancel);removeEventListener('touchstart',cancel);removeEventListener('keydown',cancel);stop=null};
+    stop=done;addEventListener('wheel',cancel,{passive:true});addEventListener('touchstart',cancel,{passive:true});addEventListener('keydown',cancel);
+    const step=now=>{const t=Math.min(1,(now-t0)/dur),cur=y0+d*ease(t);
+      scrollTo(0,Math.round(cur));
+      if(t<1)raf=requestAnimationFrame(step);else done()};
+    raf=requestAnimationFrame(step)}
+  document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a||e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey)return;
+    const id=a.getAttribute('href').slice(1),el=id?document.getElementById(id):null;if(!el)return;
+    e.preventDefault();const m=parseFloat(getComputedStyle(el).scrollMarginTop)||0;
+    glide(id==='top'?0:el.getBoundingClientRect().top+scrollY-m);
+    history.pushState(null,'','#'+id);if(el.tabIndex<0&&!el.hasAttribute('tabindex'))el.setAttribute('tabindex','-1');el.focus({preventScroll:true})});
+})();
+
+/* ---------- Menu ---------- */
+const mb=document.getElementById('menuBtn'),menu=document.getElementById('menu');
+mb.addEventListener('click',()=>{const o=menu.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');mb.setAttribute('aria-expanded',false)}));
+
+/* ---------- How it works: plot-to-keys route map ---------- */
+const S=[
+ {n:'Site visit',t:'We meet on your plot',s:'plot',d:'We walk the plot with you: sun, access, levels, neighbours and your society\'s rules for your street.',get:'Site notes, photos and early ideas.',you:'An hour on site and your plot documents.'},
+ {n:'Your brief',t:'We discuss your needs',s:'interior',d:'Room by room, we write down how your family lives now and how you want to live in this house.',get:'A written brief and a budget band to plan around.',you:'Your wish list and your non-negotiables.'},
+ {n:'Design & render',t:'We design it and render it',s:'day',d:'Your ideas become floor plans and a 3D render of your home, so you can see it before it exists and share it with family.',get:'Plans and a photo-real render.',you:'Honest feedback until it feels like yours.'},
+ {n:'Approvals',t:'Drawings and approvals',s:'plan',d:'Architecture, structure and services are drawn in full and submitted to CDA, DHA or Bahria. Ink before concrete.',get:'A complete, approved drawing set.',you:'Signatures on the submission.'},
+ {n:'Contract',t:'One quote, one contract',s:'plan',d:'Priced against the approved drawings with material grades written in. Payments are tied to stages, so you always know what you are paying for.',get:'One contract for design, construction and finishes.',you:'Review, questions, signature.'},
+ {n:'Structure',t:'The bones go up',s:'site',d:'Foundation, columns and slabs. A-grade steel and zero cut corners.',get:'Regular photo and video updates from site.',you:'Nothing. Watch it rise.'},
+ {n:'Finishes',t:'Finishes and interiors',s:'detail',d:'Glazing, stone, millwork and light, specified to the millimetre and installed to the millimetre.',get:'Samples to choose from and a walk-through before we close up.',you:'Final choices on finishes and fittings.'},
+ {n:'Keys',t:'Welcome home',s:'keys',d:'A final walk-through together, every snag closed, and the keys change hands. You live here now.',get:'Your keys and the as-built drawings of your home.',you:'Move in.'}
+];
+const PTS={ // checkpoint positions, deliberately irregular: wide = desktop, tall = phones
+ wide:{w:1000,h:420,p:[[45,300],[165,140],[310,235],[400,85],[540,170],[625,330],[790,255],[950,105]]},
+ tall:{w:360,h:720,p:[[60,40],[275,120],[130,215],[300,305],[70,390],[230,475],[300,575],[80,670]]}
+};
+const MQ=matchMedia('(max-width:700px)'),jmap=document.getElementById('jmap'),jcard=document.getElementById('jcard');let si=0;
+function drawMap(){const L=MQ.matches?PTS.tall:PTS.wide,P=L.p;let legs='';
+  for(let i=0;i<P.length-1;i++){const p0=P[i-1]||P[i],p1=P[i],p2=P[i+1],p3=P[i+2]||p2; // Catmull-Rom -> bezier for a smooth road
+    const c1=[p1[0]+(p2[0]-p0[0])/6,p1[1]+(p2[1]-p0[1])/6],c2=[p2[0]-(p3[0]-p1[0])/6,p2[1]-(p3[1]-p1[1])/6];
+    legs+=`<path class="leg" d="M${p1} C${c1} ${c2} ${p2}"/>`}
+  jmap.style.aspectRatio=L.w+'/'+L.h;
+  jmap.innerHTML=`<svg viewBox="0 0 ${L.w} ${L.h}" preserveAspectRatio="none" aria-hidden="true">${legs}</svg>`+P.map(([x,y],i)=>{
+    const nb=[P[i-1],P[i+1]].filter(Boolean),ny=nb.reduce((t,q)=>t+q[1],0)/nb.length;
+    const side=MQ.matches?(x<L.w/2?'right':'left'):(y>=ny?'below':'above');
+    return `<button class="pin" style="left:${x/L.w*100}%;top:${y/L.h*100}%" aria-label="Step ${i+1}: ${S[i].n}">${i+1}<span class="pl ${side}" aria-hidden="true">${S[i].n}</span></button>`}).join('');
+  jmap.querySelectorAll('.pin').forEach((b,i)=>b.onclick=()=>showS(i));showS(si)}
+function showS(i){si=Math.max(0,Math.min(S.length-1,i));const s=S[si];
+  jmap.querySelectorAll('.pin').forEach((b,j)=>{b.classList.toggle('done',j<si);if(j===si)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current')});
+  jmap.querySelectorAll('.leg').forEach((l,j)=>l.classList.toggle('done',j<si));
+  jcard.innerHTML=`<div class="info"><p class="step">Step ${si+1} of ${S.length}</p><h3>${s.t}</h3><p class="desc">${s.d}</p>
+   <div class="stage-nav"><button class="round" id="sPrev" aria-label="Previous step" ${si===0?'disabled':''}>←</button><button class="round" id="sNext" aria-label="Next step" ${si===S.length-1?'disabled':''}>→</button></div></div>
+   <div class="kv"><div><span>You get</span><p>${s.get}</p></div><div><span>Your part</span><p>${s.you}</p></div></div>`;
+  document.getElementById('sPrev').onclick=()=>showS(si-1);document.getElementById('sNext').onclick=()=>showS(si+1)}
+MQ.addEventListener('change',drawMap);drawMap();
+
+/* ---------- FAQ: fluid open and close, staggered reveal ---------- */
+(()=>{const box=document.querySelector('#faq');if(!box||!box.animate||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  box.classList.add('faq-anim');const items=box.querySelectorAll('details');
+  items.forEach(d=>{let anim=null,want=d.open;d.classList.toggle('on',want);
+    d.querySelector('summary').addEventListener('click',e=>{e.preventDefault();want=!want;
+      const from=d.offsetHeight;if(anim)anim.cancel();
+      d.open=want;const to=d.offsetHeight;d.open=true; // measure the end height, keep content visible while it moves
+      d.classList.toggle('on',want);d.style.overflow='hidden';
+      anim=d.animate({height:[from+'px',to+'px']},{duration:Math.min(750,320+Math.abs(to-from)*1.2),easing:'cubic-bezier(.22,1,.36,1)'});
+      anim.onfinish=()=>{anim=null;d.open=want;d.style.overflow=''}})});
+  if(!('IntersectionObserver' in window))return;
+  items.forEach((d,i)=>d.style.setProperty('--d',i*.07+'s'));box.classList.add('reveal');
+  const io=new IntersectionObserver(e=>{if(e[0].isIntersecting){box.classList.add('in');io.disconnect();
+    setTimeout(()=>items.forEach(d=>d.style.removeProperty('--d')),1500)}},{threshold:.1});io.observe(box)})();
+
+/* ---------- Free guides + download flow ---------- */
+const G=[
+ {id:'before-you-build',t:'Before You Build',k:'Checklist · PDF',c:'plan',d:'The decisions to settle before you meet any architect, so the first meeting moves your house forward.'},
+ {id:'islamabad-layout-guide',t:'Islamabad Layout Guide',k:'Guide · PDF',c:'design',d:'What realistically fits on a 5 marla, 10 marla and 1 kanal plot, with sample layouts.'},
+ {id:'material-grades-rulebook',t:'Material Grades Rulebook',k:'Rule book · PDF',c:'build',d:'Steel, cement, bricks and concrete: what the grades mean and what to check on site.'}
+];
+const gGrid=document.getElementById('gGrid');gGrid.innerHTML=''; // replace the plain fallback cards
+G.forEach(g=>{const el=document.createElement('article');el.className='g';el.dataset.c=g.c;
+  el.innerHTML=`<div class="cover"><div class="doc"><b>${g.t}</b><div><i></i><i style="width:70%"></i><i style="width:85%"></i></div><small>DBCORP</small></div></div>
+   <div class="meta"><span>${g.k}</span><span>Free</span></div><div class="body"><h3>${g.t}</h3><p>${g.d}</p></div>
+   <button class="btn small" data-id="${g.id}">Download free</button>`;gGrid.appendChild(el)});
+const modal=document.getElementById('modal');let cur=null,last=null;
+function openM(g){cur=g;last=document.activeElement;document.getElementById('mTitle').textContent=g.t;document.getElementById('mKind').textContent=g.k;
+  document.getElementById('m1').hidden=false;document.getElementById('m2').hidden=true;document.getElementById('bar2').classList.remove('on');document.getElementById('dErr').hidden=true;
+  document.getElementById('mDownload').textContent=g.k.includes('Excel')?'Download worksheet':'Download PDF';modal.hidden=false;setTimeout(()=>document.getElementById('d-name').focus(),30)}
+function closeM(){modal.hidden=true;last&&last.focus()}
+gGrid.addEventListener('click',e=>{const b=e.target.closest('button[data-id]');if(b)openM(G.find(g=>g.id===b.dataset.id))});
+document.getElementById('mClose').onclick=closeM;modal.addEventListener('click',e=>{if(e.target===modal)closeM()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!modal.hidden)closeM()});document.getElementById('mBook').onclick=closeM;
+document.getElementById('dForm').addEventListener('submit',e=>{e.preventDefault();
+  const n=document.getElementById('d-name').value.trim(),c=document.getElementById('d-contact').value.trim();
+  if(!n||!c){document.getElementById('dErr').hidden=false;return}
+  const lead={type:'download',guide:cur.id,name:n,contact:c,stage:document.getElementById('d-stage').value,optIn:document.getElementById('d-ok').checked,at:new Date().toISOString()};
+  if(LEAD_ENDPOINT)fetch(LEAD_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(lead)}).catch(()=>{});
+  document.getElementById('m1').hidden=true;document.getElementById('m2').hidden=false;document.getElementById('bar2').classList.add('on');
+  document.getElementById('mDone').textContent=`Thanks, ${n.split(' ')[0]}. Download it now. A copy will also go to ${c}.`;document.getElementById('mPrev').hidden=true});
+document.getElementById('mDownload').onclick=()=>{const ext=cur.k.includes('Excel')?'xlsx':'pdf';if(LEAD_ENDPOINT)location.href='/downloads/'+cur.id+'.'+ext;else document.getElementById('mPrev').hidden=false};
+
+/* ---------- Book a call -> Calendly (falls back to WhatsApp) ---------- */
+const calWrap=document.getElementById('calWrap');
+function showCal(on){calWrap.hidden=!on;document.getElementById('bookForm').hidden=on;document.getElementById('bookDone').hidden=true}
+if(CALENDLY_URL){
+  const sc=document.createElement('script');sc.src='https://assets.calendly.com/assets/external/widget.js';sc.async=true;
+  sc.onload=()=>Calendly.initInlineWidget({url:CALENDLY_URL+(CALENDLY_URL.includes('?')?'&':'?')+'hide_gdpr_banner=1',parentElement:document.getElementById('calendly')});
+  sc.onerror=()=>showCal(false);
+  document.head.appendChild(sc);
+  showCal(true);document.getElementById('toCalRow').hidden=false;
+  document.getElementById('toWa').onclick=e=>{e.preventDefault();showCal(false)};
+  document.getElementById('toCal').onclick=e=>{e.preventDefault();showCal(true)};
+}
+
+/* ---------- Book a call -> WhatsApp ---------- */
+document.getElementById('bForm').addEventListener('submit',e=>{e.preventDefault();const v=id=>document.getElementById(id).value.trim();
+  if(!v('b-name')||!v('b-phone')){document.getElementById('bErr').hidden=false;return}document.getElementById('bErr').hidden=true;
+  const msg=`Assalam o Alaikum DBCorp, I'd like to book a free consultation call.\n\nName: ${v('b-name')}\nWhatsApp: ${v('b-phone')}\nPlot: ${v('b-size')}, ${v('b-area')}\nNeed: ${v('b-need')}\nBest time: ${v('b-time')}`;
+  document.getElementById('waLink').href=`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
+  if(LEAD_ENDPOINT)fetch(LEAD_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({type:'call',msg})}).catch(()=>{});
+  document.getElementById('bookForm').hidden=true;document.getElementById('bookDone').hidden=false});
+document.getElementById('bAgain').onclick=()=>{document.getElementById('bookForm').hidden=false;document.getElementById('bookDone').hidden=true};
+
+</script>
+
 </body>
 </html>

@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en-PK">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>House Construction Cost Calculator Islamabad 2026 | DBCorp</title>
+<meta name="description" content="Estimate the cost to build a house in Islamabad, Rawalpindi, Lahore or Karachi from your plot size, floors, basement and finish level. Free, instant, with a realistic price range and cost per sq ft.">
+<link rel="canonical" href="https://dbcorp.pk/construction-cost-calculator.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="geo.region" content="PK-IS"><meta name="geo.placename" content="Islamabad">
+<meta property="og:type" content="website"><meta property="og:site_name" content="DBCorp — Design Build Corporation">
+<meta property="og:title" content="House Construction Cost Calculator | DBCorp">
+<meta property="og:description" content="What will your house really cost to build? Plot, floors, basement and finish level, with a realistic price range.">
+<meta property="og:url" content="https://dbcorp.pk/construction-cost-calculator.html"><meta property="og:image" content="https://dbcorp.pk/images/hero.jpg">
+<meta property="og:locale" content="en_PK"><meta property="og:image:alt" content="A newly built two-storey brick home in Islamabad by DBCorp"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
+<link rel="icon" href="images/favicon-32.png?v=2" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png?v=2">
+<meta name="theme-color" content="#FFFFFF">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@400;500&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#FFFFFF; --stone:#F4F2EE; --stone-2:#EBE7E0; --ink:#111111; --muted:#6B6A66; --line:#E4E0D9;
+  --head:"Inter Tight","Helvetica Neue",Arial,sans-serif;
+  --body:"Inter","Helvetica Neue",Arial,sans-serif;
+  --r:18px; --wrap:1280px;
+  /* breakdown chart: categorical slots 1-5, fixed order */
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(16px,4vw,48px)}
+h1,h2,h3{font-family:var(--head);font-weight:500;letter-spacing:-.025em;line-height:1.05;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.3rem,5.4vw,4.4rem)}
+h2{font-size:clamp(1.8rem,3.6vw,2.8rem)}
+h3{font-size:1.25rem;letter-spacing:-.01em;line-height:1.25}
+p{margin:0}
+.sub{font-size:clamp(1.05rem,1.5vw,1.25rem);color:var(--muted);line-height:1.5;max-width:52ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:var(--body);font-weight:500;font-size:1rem;padding:.95rem 1.6rem;border-radius:999px;border:1px solid var(--ink);background:var(--ink);color:#fff;text-decoration:none;cursor:pointer;transition:opacity .15s}
+.btn:hover{opacity:.86}
+.btn.line{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.small{padding:.6rem 1.1rem;font-size:.93rem}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(12px)}
+.nav .wrap{display:flex;align-items:center;gap:40px;height:72px}
+.logo{display:inline-flex;text-decoration:none}
+.logo img{display:block;width:36px;height:36px}
+footer .logo img{width:48px;height:48px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.nav ul{list-style:none;display:flex;gap:30px;margin:0;padding:0;flex:1}
+.nav ul a{text-decoration:none;font-size:.97rem}
+.nav ul a:hover{color:var(--muted)}
+.nav ul a[aria-current]{border-bottom:1px solid var(--ink)}
+.nav .right{margin-left:auto;display:flex;gap:10px;align-items:center}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:999px;padding:.55rem 1rem;font:inherit;font-size:.93rem;color:var(--ink);cursor:pointer}
+@media (max-width:900px){
+  .nav ul{display:none;position:absolute;left:0;right:0;top:72px;flex-direction:column;gap:0;background:#fff;padding:8px clamp(16px,4vw,48px) 24px;border-bottom:1px solid var(--line)}
+  .nav ul.open{display:flex}
+  .nav ul a{display:block;padding:12px 0;font-size:1.15rem}
+  .menu-btn{display:inline-block}
+  .nav .right .btn{display:none}
+}
+
+/* intro */
+.intro{padding-block:clamp(40px,6vw,80px) clamp(28px,4vw,48px);display:grid;gap:18px}
+.draft{justify-self:start;background:#FFF4D6;color:#5C4300;border-radius:999px;padding:4px 12px;font-size:.82rem;font-weight:500}
+
+/* layout */
+.calc{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start;padding-bottom:clamp(72px,10vw,120px)}
+@media (max-width:960px){.calc{grid-template-columns:1fr}}
+
+/* form */
+form{display:grid;gap:16px}
+fieldset{border:0;margin:0;padding:clamp(20px,3vw,32px);background:var(--stone);border-radius:var(--r);display:grid;gap:18px;min-width:0}
+legend{float:left;width:100%;padding:0;display:flex;gap:12px;align-items:baseline;font-family:var(--head);font-weight:500;font-size:1.35rem;letter-spacing:-.015em}
+legend b{font-weight:500;font-size:.85rem;color:var(--muted);font-family:var(--body);letter-spacing:0}
+legend+*{clear:both}
+.field{display:grid;gap:6px;min-width:0}
+.field>label,.lab{font-size:.88rem;font-weight:500}
+.hint{font-size:.8rem;color:var(--muted)}
+input,select{font:inherit;font-size:1rem;color:var(--ink);background:#fff;border:1px solid transparent;border-radius:12px;padding:.75rem .9rem;width:100%;min-width:0}
+input:focus,select:focus{outline:2px solid var(--ink);outline-offset:0}
+.two{display:grid;grid-template-columns:1.4fr 1fr;gap:14px}
+@media (max-width:560px){.two{grid-template-columns:1fr}}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg label{position:relative;cursor:pointer}
+.seg input{position:absolute;opacity:0;width:1px;height:1px;padding:0}
+.seg span{display:block;padding:.55rem 1rem;border-radius:999px;background:#fff;font-size:.93rem;border:1px solid var(--line);transition:background .15s,color .15s}
+.seg input:checked+span{background:var(--ink);color:#fff;border-color:var(--ink)}
+.seg input:focus-visible+span{outline:2px solid var(--ink);outline-offset:2px}
+.seg input:disabled+span{opacity:.4;cursor:not-allowed}
+.grades{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+@media (max-width:640px){.grades{grid-template-columns:1fr 1fr}}
+.grades label{position:relative;cursor:pointer}
+.grades input{position:absolute;opacity:0;width:1px;height:1px;padding:0}
+.grades .card{display:grid;gap:4px;height:100%;padding:14px;border-radius:14px;background:#fff;border:1px solid var(--line)}
+.grades .card b{font-weight:500}
+.grades .card small{font-size:.78rem;color:var(--muted);line-height:1.35}
+.grades input:checked+.card{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.grades input:focus-visible+.card{outline:2px solid var(--ink);outline-offset:2px}
+
+/* results */
+.res{position:sticky;top:88px;display:grid;gap:16px}
+@media (max-width:960px){.res{position:static}}
+.card-r{border:1px solid var(--line);border-radius:var(--r);padding:clamp(20px,3vw,28px);display:grid;gap:14px;background:#fff}
+.kicker{font-size:.85rem;color:var(--muted)}
+.big{font-family:var(--head);font-weight:500;font-size:clamp(2rem,4vw,2.9rem);letter-spacing:-.03em;line-height:1.05}
+.mid{display:flex;gap:6px 18px;flex-wrap:wrap;font-size:.95rem}
+.mid span{color:var(--muted)}
+.bar{display:flex;gap:2px;height:14px;border-radius:4px;overflow:hidden;background:var(--stone)}
+.bar i{display:block;height:100%;min-width:2px}
+.leg{display:grid;gap:0;margin:0;padding:0;list-style:none}
+.leg li{display:grid;grid-template-columns:12px 1fr auto auto;gap:10px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line);font-size:.93rem}
+.leg li:last-child{border-bottom:0}
+.leg .sw{width:12px;height:12px;border-radius:3px}
+.leg .pct{color:var(--muted);font-size:.85rem;min-width:3.2em;text-align:right}
+.leg .amt{font-variant-numeric:tabular-nums;font-weight:500;min-width:6.5em;text-align:right}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fact{background:var(--stone);border-radius:12px;padding:12px 14px;display:grid;gap:2px}
+.fact span{font-size:.8rem;color:var(--muted)}
+.fact b{font-weight:500;font-variant-numeric:tabular-nums}
+.note{font-size:.82rem;color:var(--muted)}
+.print-only{display:none}
+.ctas{display:flex;gap:8px;flex-wrap:wrap}
+.ok{color:#1F6B3A}
+
+/* faq */
+.faqs{display:grid;grid-template-columns:1fr 1.5fr;gap:clamp(32px,6vw,96px);padding-block:clamp(64px,9vw,120px);border-top:1px solid var(--line)}
+@media (max-width:860px){.faqs{grid-template-columns:1fr}}
+.faqs details{border-top:1px solid var(--line);padding:20px 0}
+.faqs details:last-child{border-bottom:1px solid var(--line)}
+.faqs summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;font-weight:500;font-size:1.05rem}
+.faqs summary::-webkit-details-marker{display:none}
+.faqs summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--muted);flex:none}
+.faqs details[open] summary::after{content:"−"}
+.faqs details p{color:var(--muted);margin-top:12px;max-width:62ch}
+/* faq motion: armed only once JS adds .faq-anim, so answers never hide without JS */
+.faqs.faq-anim details summary::after{content:"+";transition:transform .55s cubic-bezier(.22,1,.36,1)}
+.faqs.faq-anim details.on summary::after{transform:rotate(45deg)}
+.faqs.faq-anim details p{transition:opacity .45s ease .08s,transform .6s cubic-bezier(.22,1,.36,1) .04s}
+.faqs.faq-anim details:not(.on) p{opacity:0;transform:translateY(-8px)}
+.faqs.faq-anim summary{transition:color .2s}
+@media (hover:hover){.faqs.faq-anim summary:hover{color:var(--muted)}}
+.faqs.faq-anim.reveal details{opacity:0;transform:translateY(18px);transition:opacity .8s cubic-bezier(.22,1,.36,1) var(--d,0s),transform .8s cubic-bezier(.22,1,.36,1) var(--d,0s)}
+.faqs.faq-anim.reveal.in details{opacity:1;transform:none}
+
+/* footer */
+footer{background:var(--stone);padding-block:64px 40px}
+.foot{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:32px}
+.foot h4{font-size:.85rem;font-weight:500;color:var(--muted);margin:0 0 14px}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.foot a{text-decoration:none;font-size:.95rem}
+.foot a:hover{color:var(--muted)}
+.tag{font-family:var(--head);font-size:1.5rem;font-weight:500;letter-spacing:-.02em;line-height:1.2;max-width:18ch;margin-top:18px}
+.legal{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:56px;padding-top:22px;border-top:1px solid var(--stone-2);font-size:.85rem;color:var(--muted)}
+@media (max-width:960px){.foot{grid-template-columns:1fr 1fr}.foot>div:first-child{grid-column:1/-1}}
+
+/* phone: live total pinned to the bottom */
+.mbar{display:none}
+@media (max-width:960px){
+  .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;gap:12px;align-items:center;justify-content:space-between;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(255,255,255,.96);border-top:1px solid var(--line)}
+  .mbar div{display:grid;line-height:1.25}
+  .mbar span{font-size:.75rem;color:var(--muted)}
+  .mbar b{font-family:var(--head);font-weight:500;font-size:1.15rem}
+  footer{padding-bottom:110px}
+}
+
+@media print{
+  .nav,.mbar,footer,.faqs,#calc,.ctas,.draft{display:none!important}
+  .calc{grid-template-columns:1fr}
+  .res{position:static}
+  body{font-size:12pt}
+  .print-only{display:block}
+}
+</style>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"House Construction Cost Calculator","url":"https://dbcorp.pk/construction-cost-calculator.html",
+ "applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"PKR"},
+ "description":"Estimate the cost to build a house in Pakistan from plot size, location, floors, basement and finish level.",
+ "provider":{"@type":"GeneralContractor","name":"DBCorp — Design Build Corporation","url":"https://dbcorp.pk/"}}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How accurate is this calculator?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It works out your covered area from the plot and floors, prices the grey structure from material quantities and current market rates, and prices finishing by level. Expect a real quote to land inside the range shown. Only a drawing-based quote gives an exact number."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is the difference between grey structure and complete?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Grey structure is the foundation, columns, beams, slabs, brickwork, plaster and concealed pipes. Complete adds flooring, doors, windows, bathrooms, kitchen, electrical fittings, paint and woodwork."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Why is the per square foot rate different from what contractors quote?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Contractors quote different things under the same name. Some leave out bathrooms, kitchens or their own profit. Ask what each rate includes, and compare like for like."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Why does a basement cost so much more?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A basement needs deep excavation, retaining walls, heavier steel and waterproofing. Its structure costs roughly one and a half times more per square foot than the floors above."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What does the estimate leave out?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The boundary wall and gate, solar, air conditioning, landscaping, architecture and structural design, map approval fees and utility connections. We price these separately on the call."
+   }
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://dbcorp.pk/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Construction cost calculator",
+   "item": "https://dbcorp.pk/construction-cost-calculator.html"
+  }
+ ]
+}
+</script>
+<!-- every rate the calculator uses lives in this file -->
+<script src="calculator-rates.js"></script>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="index.html"><img src="images/logo.svg" width="61" height="61" alt=""><span class="sr-only">DBCorp, home</span></a>
+    <ul id="menu">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#how">How it works</a></li>
+      <li><a href="construction-cost-calculator.html" aria-current="page">Cost calculator</a></li>
+      <li><a href="index.html#guides">Free guides</a></li>
+    </ul>
+    <div class="right">
+      <a class="btn small" href="index.html#calendar">Book a call</a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Menu</button>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <div class="intro">
+    <p class="draft" id="draft" hidden>Draft rates: pending professional review</p>
+    <h1>What will your house cost to build?</h1>
+    <p class="sub">Most calculators multiply your plot by one rate. This one works out your covered area, prices the structure from real material quantities, and adds finishing at the level you choose. <span id="updated"></span></p>
+  </div>
+
+  <div class="calc">
+    <form id="calc" novalidate>
+      <fieldset>
+        <legend><b>1</b>Your plot</legend>
+        <div class="two">
+          <div class="field"><label for="size">Plot size</label><input id="size" name="size" type="number" inputmode="decimal" min="1" step="any" value="10"></div>
+          <div class="field"><label for="unit">Unit</label><select id="unit" name="unit"><option value="marla" selected>Marla</option><option value="kanal">Kanal</option><option value="sqyd">Sq yards</option><option value="sqft">Sq ft</option></select></div>
+        </div>
+        <div class="field"><label for="loc">Where is the plot?</label><select id="loc" name="loc"></select><span class="hint" id="marlaHint"></span></div>
+      </fieldset>
+
+      <fieldset>
+        <legend><b>2</b>The house</legend>
+        <div class="field"><span class="lab" id="scopeL">What should we price?</span>
+          <div class="seg" role="radiogroup" aria-labelledby="scopeL">
+            <label><input type="radio" name="scope" value="complete" checked><span>Complete house</span></label>
+            <label><input type="radio" name="scope" value="grey"><span>Grey structure only</span></label>
+          </div>
+        </div>
+        <div class="field"><span class="lab" id="floorsL">Floors above ground</span>
+          <div class="seg" role="radiogroup" aria-labelledby="floorsL">
+            <label><input type="radio" name="floors" value="1"><span>Ground only</span></label>
+            <label><input type="radio" name="floors" value="2" checked><span>Ground + 1</span></label>
+            <label><input type="radio" name="floors" value="3"><span>Ground + 2</span></label>
+          </div>
+        </div>
+        <div class="field"><span class="lab" id="baseL">Basement</span>
+          <div class="seg" role="radiogroup" aria-labelledby="baseL">
+            <label><input type="radio" name="base" value="none" checked><span>None</span></label>
+            <label><input type="radio" name="base" value="partial"><span>Partial</span></label>
+            <label><input type="radio" name="base" value="full"><span>Full</span></label>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset id="finishSet">
+        <legend><b>3</b>Finishing</legend>
+        <div class="grades" id="tiers" role="radiogroup" aria-label="Finishing level"></div>
+      </fieldset>
+    </form>
+
+    <aside class="res" id="res" aria-live="polite">
+      <div class="card-r">
+        <p class="kicker" id="rTitle">Estimated total cost</p>
+        <p class="note print-only" id="rSpec"></p>
+        <p class="big" id="rRange">—</p>
+        <div class="mid"><p><span>Most likely</span> <b id="rMid"></b></p><p><span>Per sq ft</span> <b id="rSqft"></b></p></div>
+        <div class="bar" id="rBar" role="img"></div>
+        <ul class="leg" id="rLeg"></ul>
+        <div class="facts">
+          <div class="fact"><span>Covered area</span><b id="fCov"></b></div>
+          <div class="fact"><span>Build time</span><b id="fTime"></b></div>
+        </div>
+        <div class="ctas">
+          <a class="btn" id="waBtn" href="https://wa.me/923135558245" target="_blank" rel="noopener">Get a quotation</a>
+          <button class="btn line" id="printBtn" type="button">Get PDF</button>
+        </div>
+        <p class="note">This is a planning estimate, not a quote. It leaves out the boundary wall, solar, air conditioning, design fees, approvals and utility connections. Your exact price comes from your drawings.</p>
+      </div>
+
+    </aside>
+  </div>
+
+  <section class="faqs" aria-labelledby="faqH">
+    <div style="display:grid;gap:18px;align-content:start"><h2 id="faqH">Questions about building costs</h2><p class="sub">Anything else, ask us on the <a href="index.html#calendar">free 10-minute call</a>.</p></div>
+    <div>
+      <details open><summary>How accurate is this calculator?</summary><p>It works out your covered area from the plot and floors, prices the grey structure from material quantities and current market rates, and prices finishing by level. Expect a real quote to land inside the range shown. Only a drawing-based quote gives an exact number.</p></details>
+      <details><summary>What is the difference between grey structure and complete?</summary><p>Grey structure is the foundation, columns, beams, slabs, brickwork, plaster and concealed pipes. Complete adds flooring, doors, windows, bathrooms, kitchen, electrical fittings, paint and woodwork.</p></details>
+      <details><summary>Why is the per square foot rate different from what contractors quote?</summary><p>Contractors quote different things under the same name. Some leave out bathrooms, kitchens or their own profit. Ask what each rate includes, and compare like for like.</p></details>
+      <details><summary>Why does a basement cost so much more?</summary><p>A basement needs deep excavation, retaining walls, heavier steel and waterproofing. Its structure costs roughly one and a half times more per square foot than the floors above.</p></details>
+      <details><summary>What does the estimate leave out?</summary><p>The boundary wall and gate, solar, air conditioning, landscaping, architecture and structural design, map approval fees and utility connections. We price these separately on the call.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><a class="logo" href="index.html"><img src="images/logo.svg" width="61" height="61" alt=""><span class="sr-only">DBCorp, home</span></a><p class="tag">We're building the next generation of homes in Pakistan.</p><p style="color:var(--muted);margin-top:14px;font-size:.92rem">Designed and built in Islamabad.</p></div>
+      <div><h4>Services</h4><ul><li><a href="index.html#services">Architecture</a></li><li><a href="index.html#services">Construction</a></li><li><a href="index.html#services">Interiors</a></li><li><a href="index.html#services">Renovation</a></li></ul></div>
+      <div><h4>Resources</h4><ul><li><a href="construction-cost-calculator.html">Cost calculator</a></li><li><a href="index.html#how">How it works</a></li><li><a href="index.html#guides">Free guides</a></li><li><a href="index.html#faq">FAQ</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><span style="color:var(--muted);font-size:.85rem">Text or call</span></li><li>0313 555 8245</li><li><a href="https://www.instagram.com/dbcorp.pk/" target="_blank" rel="noopener">Instagram ↗</a></li></ul></div>
+    </div>
+    <div class="legal"><span>© 2026 DBCorp — Design Build Corporation</span><span>Drawn, checked and built by the same hands</span></div>
+  </div>
+</footer>
+<div class="mbar"><div><span>Estimated total</span><b id="mTotal">—</b></div><a class="btn small" href="#res">See breakdown</a></div>
+
+<script>
+/* All rates come from calculator-rates.js. Edit that file, not this one. */
+const R=window.RATES;
+const WA="923135558245";
+const LEAD_ENDPOINT=""; // same as index.html: set to a Formspree / Google Apps Script URL at launch
+
+/* ---------- formatting ---------- */
+const nf=new Intl.NumberFormat('en-PK',{maximumFractionDigits:0});
+const rs=n=>'PKR '+nf.format(Math.round(n/1000)*1000);
+function pk(n){ // short lakh / crore form
+  if(n>=1e7)return(n/1e7).toFixed(n>=1e8?1:2).replace(/\.?0+$/,'')+' crore';
+  if(n>=1e5)return(n/1e5).toFixed(1).replace(/\.0$/,'')+' lakh';
+  return nf.format(Math.round(n))}
+const sq=n=>nf.format(Math.round(n))+' sq ft';
+const pct=n=>Math.round(n*100)+'%';
+const $=id=>document.getElementById(id);
+const form=$('calc');
+
+/* ---------- build the location list and finishing cards from the rates file ---------- */
+$('loc').innerHTML=Object.entries(R.locations).map(([k,l],i)=>`<option value="${k}"${i===0?' selected':''}>${l.name}</option>`).join('');
+const TIER_KEYS=Object.keys(R.finish);
+$('tiers').innerHTML=TIER_KEYS.map((k,i)=>{const t=R.finish[k];
+  return`<label><input type="radio" name="tier" value="${k}"${i===1?' checked':''}><span class="card"><b>${t.name}</b><small>${t.spec}</small></span></label>`}).join('');
+
+/* ---------- read inputs ---------- */
+function read(){const fd=new FormData(form),g=k=>fd.get(k);
+  return{size:parseFloat(g('size'))||0,unit:g('unit'),loc:g('loc'),scope:g('scope'),floors:+g('floors'),base:g('base'),tier:g('tier')}}
+
+/* ---------- the estimate ---------- */
+function estimate(v){
+  const L=R.locations[v.loc],cf=L.cost;
+  const plot=v.size*{marla:L.marla,kanal:L.marla*20,sqyd:9,sqft:1}[v.unit];
+  // covered area
+  const cover=R.coverage.find(([max])=>plot<=max)[1];
+  const ground=plot*cover;
+  const area={ground,first:v.floors>=2?ground*R.firstFloor:0,second:v.floors>=3?ground*R.secondFloor:0,
+    mumty:plot>4000?R.mumtyLarge:R.mumty};
+  const above=area.ground+area.first+area.second+area.mumty;
+  const base=v.base==='full'?ground:v.base==='partial'?ground*R.basement.partial:0;
+  const total=above+base;
+  // grey structure: quantities x prices, basement counts heavier
+  const eq=above+base*R.basement.greyFactor;
+  const mats=Object.values(R.materials).map(m=>({...m,qty:m.perSqft*eq,amt:m.perSqft*eq*m.price*cf}));
+  const matTotal=mats.reduce((s,m)=>s+m.amt,0);
+  const greyOther=matTotal*R.greyOtherMaterials;
+  const greyLab=R.greyLabour*eq*cf;
+  const grey=matTotal+greyOther+greyLab;
+  // finishing: mumty and basement finished lighter
+  const finArea=above-area.mumty*.5+base*R.basement.finishFactor;
+  const finish=v.scope==='complete'?R.finish[v.tier].rate*finArea*cf:0;
+  const overhead=(grey+finish)*R.overhead;
+  const sum=grey+finish+overhead;
+  // timeline, months
+  const months=4+above/2000+(v.base==='full'?2:v.base==='partial'?1:0)+(v.scope==='complete'?(3+above/1500)*(R.finish[v.tier].rate/R.finish.standard.rate)**.35:0);
+  return{plot,cover,area,above,base,total,mats,matTotal,greyOther,greyLab,grey,finish,overhead,sum,months,L};
+}
+
+/* ---------- render ---------- */
+function render(){
+  const v=read();
+  const L=R.locations[v.loc];
+  $('marlaHint').hidden=!(v.unit==='marla'||v.unit==='kanal');
+  $('marlaHint').textContent=`1 marla = ${nf.format(L.marla)} sq ft here.`;
+  $('finishSet').hidden=v.scope==='grey';
+  if(!(v.size>0)){$('rRange').textContent='Enter a plot size';return}
+  const o=estimate(v);
+  const lo=o.sum*R.range.low,hi=o.sum*R.range.high;
+  $('rTitle').textContent=v.scope==='grey'?'Estimated grey structure cost':'Estimated total cost';
+  const a=pk(lo),b=pk(hi),ua=a.split(' ')[1],ub=b.split(' ')[1];
+  $('rRange').textContent=ua&&ua===ub?`PKR ${a.split(' ')[0]} – ${b}`:`PKR ${a} – ${b}`;
+  $('rMid').textContent='PKR '+pk(o.sum);
+  $('rSqft').textContent='PKR '+nf.format(Math.round(o.sum/o.total/50)*50);
+  $('mTotal').textContent='PKR '+pk(o.sum);
+  // breakdown bar + legend (zero segments left out)
+  const seg=[['Grey structure',o.grey,'var(--s1)'],['Finishing',o.finish,'var(--s2)'],['Overhead & profit',o.overhead,'var(--s3)']].filter(s=>s[1]>0);
+  $('rBar').innerHTML=seg.map(([n,a,c])=>`<i style="flex:${a};background:${c}" title="${n}: PKR ${pk(a)}"></i>`).join('');
+  $('rBar').setAttribute('aria-label','Cost breakdown: '+seg.map(([n,a])=>`${n} ${pct(a/o.sum)}`).join(', '));
+  $('rLeg').innerHTML=seg.map(([n,a,c])=>`<li><i class="sw" style="background:${c}"></i><span>${n}</span><span class="pct">${pct(a/o.sum)}</span><span class="amt">${pk(a)}</span></li>`).join('');
+  $('fCov').textContent=sq(o.total);
+  $('fTime').textContent=`${Math.round(o.months*.9)}–${Math.round(o.months*1.15)} months`;
+  // share + WhatsApp
+  const p=new URLSearchParams();for(const[k,val]of new FormData(form))if(val!=='')p.append(k,val);
+  history.replaceState(null,'','#'+p.toString());
+  const unitTxt={marla:'marla',kanal:'kanal',sqyd:'sq yd',sqft:'sq ft'}[v.unit];
+  const msg=`Assalam o Alaikum DBCorp, I used your cost calculator and would like an exact quote.\n\nPlot: ${v.size} ${unitTxt}, ${L.name}\nHouse: ${v.floors===1?'Ground only':'Ground + '+(v.floors-1)}${v.base!=='none'?', '+v.base+' basement':''}, about ${sq(o.total)}\nScope: ${v.scope==='grey'?'Grey structure':'Complete, '+R.finish[v.tier].name+' finishing'}\nEstimate: PKR ${pk(lo)} – ${pk(hi)}\n\nMy estimate: ${location.href}`;
+  $('rSpec').textContent=`${v.size} ${unitTxt} plot, ${L.name}. ${v.floors===1?'Ground only':'Ground + '+(v.floors-1)}${v.base!=='none'?', '+v.base+' basement':''}, about ${sq(o.total)} covered. ${v.scope==='grey'?'Grey structure':R.finish[v.tier].name+' finishing'}. Rates ${R.updated}.`;
+  $('waBtn').href=`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
+  $('waBtn').dataset.msg=msg;
+}
+
+/* ---------- restore from a shared link (values no longer in the rates file are ignored) ---------- */
+(()=>{if(location.hash.length<2)return;const p=new URLSearchParams(location.hash.slice(1));
+  for(const[k,val]of p)form.querySelectorAll(`[name="${k}"]`).forEach(el=>{
+    if(el.type==='radio'){if(el.value===val)el.checked=true}
+    else if(el.tagName!=='SELECT'||[...el.options].some(o=>o.value===val))el.value=val})})();
+
+form.addEventListener('input',render);form.addEventListener('change',render);
+$('waBtn').addEventListener('click',()=>{if(LEAD_ENDPOINT)fetch(LEAD_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({type:'estimate',msg:$('waBtn').dataset.msg})}).catch(()=>{})});
+$('printBtn').onclick=()=>print();
+$('draft').hidden=R.verified;
+$('updated').textContent=`Rates last reviewed ${R.updated}.`;
+render();
+
+/* ---------- FAQ: fluid open and close, staggered reveal ---------- */
+(()=>{const box=document.querySelector('.faqs');if(!box||!box.animate||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  box.classList.add('faq-anim');const items=box.querySelectorAll('details');
+  items.forEach(d=>{let anim=null,want=d.open;d.classList.toggle('on',want);
+    d.querySelector('summary').addEventListener('click',e=>{e.preventDefault();want=!want;
+      const from=d.offsetHeight;if(anim)anim.cancel();
+      d.open=want;const to=d.offsetHeight;d.open=true; // measure the end height, keep content visible while it moves
+      d.classList.toggle('on',want);d.style.overflow='hidden';
+      anim=d.animate({height:[from+'px',to+'px']},{duration:Math.min(750,320+Math.abs(to-from)*1.2),easing:'cubic-bezier(.22,1,.36,1)'});
+      anim.onfinish=()=>{anim=null;d.open=want;d.style.overflow=''}})});
+  if(!('IntersectionObserver' in window))return;
+  items.forEach((d,i)=>d.style.setProperty('--d',i*.07+'s'));box.classList.add('reveal');
+  const io=new IntersectionObserver(e=>{if(e[0].isIntersecting){box.classList.add('in');io.disconnect();
+    setTimeout(()=>items.forEach(d=>d.style.removeProperty('--d')),1500)}},{threshold:.1});io.observe(box)})();
+
+/* ---------- Menu ---------- */
+const mb=$('menuBtn'),menu=$('menu');
+mb.addEventListener('click',()=>{const o=menu.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+</script>
+</body>
+</html>
