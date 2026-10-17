@@ -6,3 +6,5 @@ Untitled_HDR-2 copy.jpg
 *firebase-adminsdk*.json
 *service-account*.json
 .firebase/
+# original video masters: only the web versions in videos/ are published
+*.mov

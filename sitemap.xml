@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://dbcorp.pk/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <image:image><image:loc>https://dbcorp.pk/images/hero.jpg</image:loc></image:image>
     <image:image><image:loc>https://dbcorp.pk/images/svc-architecture.jpg</image:loc></image:image>
     <image:image><image:loc>https://dbcorp.pk/images/svc-turnkey.jpg</image:loc></image:image>
@@ -10,7 +10,7 @@
     <image:image><image:loc>https://dbcorp.pk/images/svc-grey-structure.jpg</image:loc></image:image>
   </url>
   <url>
-    <loc>https://dbcorp.pk/construction-cost-calculator.html</loc>
-    <lastmod>2026-10-17</lastmod>
+    <loc>https://dbcorp.pk/cost-calculator</loc>
+    <lastmod>2026-10-18</lastmod>
   </url>
 </urlset>

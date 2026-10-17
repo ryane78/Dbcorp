@@ -18,10 +18,12 @@
 <meta name="theme-color" content="#FFFFFF">
 <meta property="og:locale" content="en_PK"><meta property="og:image:alt" content="A newly built two-storey brick home in Islamabad by DBCorp"><meta name="twitter:card" content="summary_large_image">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@400;500&display=swap">
+<link rel="preload" href="fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+/* fonts are served from this site, so text never waits on a third-party server */
+@font-face{font-family:"Inter Tight";font-style:normal;font-weight:400 600;font-display:swap;src:url(fonts/inter-tight-latin.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:400 500;font-display:swap;src:url(fonts/inter-latin.woff2) format("woff2")}
 /* Single light look, like the Type Five reference. Colours set explicitly. */
 :root{
   color-scheme:light;
@@ -91,7 +93,9 @@ footer .logo img{width:48px;height:48px}
 .hero .wrap{perspective:2000px}
 .hero .photo.tilt{transform-origin:50% 100%;transform:rotateX(var(--rx,0deg)) scale(var(--s,1));will-change:transform;
   box-shadow:0 calc(var(--sh,0) * 30px) calc(var(--sh,0) * 60px) calc(var(--sh,0) * -24px) rgba(0,0,0,.25)}
-.hero .photo.tilt img{transform:scale(1.1) translate3d(0,var(--py,0px),0);will-change:transform}
+.hero .photo.tilt img,.hero .photo.tilt video{transform:scale(1.1) translate3d(0,var(--py,0px),0);will-change:transform}
+.hero .photo video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .9s ease}
+.hero .photo video.on{opacity:1}
 
 /* section heads + features */
 .head{display:grid;gap:18px;justify-items:center;text-align:center;margin-bottom:clamp(40px,6vw,72px)}
@@ -258,7 +262,7 @@ input:focus,select:focus{outline:2px solid var(--ink);outline-offset:0}
 /* footer */
 footer{background:var(--stone);padding-block:64px 40px}
 .foot{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:32px}
-.foot h4{font-size:.85rem;font-weight:500;color:var(--muted);margin:0 0 14px}
+.foot h3{font-family:var(--body);font-size:.85rem;font-weight:500;letter-spacing:0;line-height:1.4;color:var(--muted);margin:0 0 14px}
 .foot ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
 .foot a{text-decoration:none;font-size:.95rem}
 .foot a:hover{color:var(--muted)}
@@ -403,7 +407,10 @@ footer{background:var(--stone);padding-block:64px 40px}
     }
    }
   ]
- }
+ },
+ "legalName": "Design Build Corporation",
+ "disambiguatingDescription": "Islamabad house design and construction firm. Not affiliated with D B Corp Ltd, the Indian media company (Dainik Bhaskar).",
+ "slogan": "Drawn once, built right."
 }
 </script>
 <script type="application/ld+json">
@@ -492,6 +499,14 @@ footer{background:var(--stone);padding-block:64px 40px}
   },
   {
    "@type": "Question",
+   "name": "Is DBCorp the same as D B Corp Ltd?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. DBCorp (Design Build Corporation) is a house design and construction firm based in Islamabad, Pakistan. It is not related to D B Corp Ltd, the Indian media company that publishes Dainik Bhaskar."
+   }
+  },
+  {
+   "@type": "Question",
    "name": "Do you work outside Islamabad?",
    "acceptedAnswer": {
     "@type": "Answer",
@@ -511,7 +526,7 @@ footer{background:var(--stone);padding-block:64px 40px}
       <li><a href="#services">Services</a></li>
       <li><a href="#how">How it works</a></li>
       <li><a href="#stories">Clients</a></li>
-      <li><a href="construction-cost-calculator.html">Cost calculator</a></li>
+      <li><a href="/cost-calculator">Cost calculator</a></li>
       <li><a href="#guides">Free guides</a></li>
     </ul>
     <div class="right">
@@ -531,7 +546,8 @@ footer{background:var(--stone);padding-block:64px 40px}
       <p class="sub center">We design your house, get it approved, build it and hand you the keys. One team in Islamabad, from empty plot to move-in day.</p>
       <div class="hero-ctas"><a class="btn" href="#calendar">Book a free call</a><a class="btn line" href="#how">See how it works</a></div>
     </div>
-    <div class="photo"><img src="images/hero.jpg" width="2400" height="1343" alt="A newly built two-storey home with exposed brick, cream mouldings, a wrought-iron balcony and gate" style="object-position:50% 60%" fetchpriority="high"></div>
+    <div class="photo"><picture><source media="(max-width:640px)" type="image/webp" srcset="videos/hero-poster-portrait.webp"><img src="videos/hero-poster.webp" width="1920" height="1080" alt="A newly built brick and stone home at dusk, the opening shot of a short film of DBCorp homes" fetchpriority="high"></picture>
+      <video id="heroVideo" muted loop playsinline preload="none" aria-hidden="true"></video></div>
   </div>
 </section>
 
@@ -557,11 +573,11 @@ footer{background:var(--stone);padding-block:64px 40px}
     <div class="tq">
       <figure class="t">
         <blockquote>“The home honestly turned out better than we expected.”</blockquote>
-        <figcaption><div><strong>Kinza Atif</strong><span>Park Enclave</span></div><a class="watch" href="https://www.instagram.com/reel/DR4rSLqiKGC/" target="_blank" rel="noopener" aria-label="Watch Kinza Atif's full video testimonial on Instagram"><em>Watch the video</em><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></i></a></figcaption>
+        <figcaption><div><strong>Kinza Atif</strong><span>Park Enclave</span></div><a class="watch" href="https://www.instagram.com/reel/DR4rSLqiKGC/" target="_blank" rel="noopener" aria-label="Watch the video: Kinza Atif's full testimonial on Instagram"><em>Watch the video</em><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></i></a></figcaption>
       </figure>
       <figure class="t">
         <blockquote>“The team has been super cooperative throughout the process.”</blockquote>
-        <figcaption><div><strong>Mr. Ahmed</strong><span>Top City</span></div><a class="watch" href="https://www.instagram.com/reel/DOBm8XuiOh-/" target="_blank" rel="noopener" aria-label="Watch Mr. Ahmed's full video testimonial on Instagram"><em>Watch the video</em><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></i></a></figcaption>
+        <figcaption><div><strong>Mr. Ahmed</strong><span>Top City</span></div><a class="watch" href="https://www.instagram.com/reel/DOBm8XuiOh-/" target="_blank" rel="noopener" aria-label="Watch the video: Mr. Ahmed's full testimonial on Instagram"><em>Watch the video</em><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></i></a></figcaption>
       </figure>
     </div>
   </div>
@@ -598,10 +614,10 @@ footer{background:var(--stone);padding-block:64px 40px}
       <p class="sub">Take the whole journey with us, or bring us in for the part you need.</p>
     </div>
     <div class="svc">
-      <a href="#book"><div class="photo"><img src="images/svc-architecture.jpg" alt="Architectural floor plans and elevation drawings spread across a desk" loading="lazy"></div><h3>Architecture &amp; design</h3><p>Bespoke homes from 10 marla to multi-kanal. Drawn once, drawn right, approved without drama.</p></a>
-      <a href="#book"><div class="photo"><img src="images/svc-turnkey.jpg" alt="Stone-clad home with wrought-iron balconies and lanterns" loading="lazy"></div><h3>Turnkey construction</h3><p>We own the schedule, the labour, the material grades and the outcome. You own the house.</p></a>
-      <a href="#book"><div class="photo"><img src="images/svc-interiors.jpg" alt="Executive office with marble floors, lit walnut shelving and leather seating" loading="lazy"></div><h3>Luxury interiors</h3><p>Imported stone, custom millwork and lighting, specified to the market's ceiling, not its average.</p></a>
-      <a href="#book"><div class="photo"><img src="images/svc-grey-structure.jpg" alt="Building facade under scaffolding during construction" loading="lazy"></div><h3>Grey structure &amp; renovation</h3><p>Structural work and transformations held to new-build standard. Nothing hides behind our plaster.</p></a>
+      <a href="#book"><div class="photo"><picture><source type="image/webp" srcset="images/svc-architecture.webp"><img src="images/svc-architecture.jpg" alt="Architectural floor plans and elevation drawings spread across a desk" loading="lazy"></picture></div><h3>Architecture &amp; design</h3><p>Bespoke homes from 10 marla to multi-kanal. Drawn once, drawn right, approved without drama.</p></a>
+      <a href="#book"><div class="photo"><picture><source type="image/webp" srcset="images/svc-turnkey.webp"><img src="images/svc-turnkey.jpg" alt="Stone-clad home with wrought-iron balconies and lanterns" loading="lazy"></picture></div><h3>Turnkey construction</h3><p>We own the schedule, the labour, the material grades and the outcome. You own the house.</p></a>
+      <a href="#book"><div class="photo"><picture><source type="image/webp" srcset="images/svc-interiors.webp"><img src="images/svc-interiors.jpg" alt="Executive office with marble floors, lit walnut shelving and leather seating" loading="lazy"></picture></div><h3>Luxury interiors</h3><p>Imported stone, custom millwork and lighting, specified to the market's ceiling, not its average.</p></a>
+      <a href="#book"><div class="photo"><picture><source type="image/webp" srcset="images/svc-grey-structure.webp"><img src="images/svc-grey-structure.jpg" alt="Building facade under scaffolding during construction" loading="lazy"></picture></div><h3>Grey structure &amp; renovation</h3><p>Structural work and transformations held to new-build standard. Nothing hides behind our plaster.</p></a>
     </div>
   </div>
 </section>
@@ -623,7 +639,7 @@ footer{background:var(--stone);padding-block:64px 40px}
 <section id="book" class="final">
   <div class="wrap">
     <div class="statement">
-      <div class="photo" style="position:absolute;inset:0;border-radius:0"><img src="images/book-banner.jpg" alt="A modern home lit up at night, with a glass balcony and warm wall lights" loading="lazy"></div>
+      <div class="photo" style="position:absolute;inset:0;border-radius:0"><picture><source type="image/webp" srcset="images/book-banner.webp"><img src="images/book-banner.jpg" alt="A modern home lit up at night, with a glass balcony and warm wall lights" loading="lazy"></picture></div>
       <div class="over" style="align-self:center">
         <h2>Ease into a home that was designed for you.</h2>
         <p style="font-size:1.15rem;opacity:.85;max-width:40ch">Book a free 10-minute call to talk through your plot, our process and pricing.</p>
@@ -688,10 +704,11 @@ footer{background:var(--stone);padding-block:64px 40px}
       <details><summary>What does design-build mean?</summary><p>One firm both designs and builds your house under one contract. You deal with one team instead of an architect, a contractor and an interior designer separately, and nobody can blame someone else for a problem.</p></details>
       <details><summary>Do you handle approvals from CDA, DHA and Bahria Town?</summary><p>Yes. We prepare the drawings and manage the submission to the authority that governs your plot.</p></details>
       <details><summary>Can you build a 10 marla or 1 kanal house?</summary><p>Yes. We design and build homes from 10 marla plots up to multi-kanal estates.</p></details>
-      <details><summary>How much does it cost to build a house in Islamabad?</summary><p>It depends on plot size, covered area, your society's rules and the finish level you choose. Try our <a href="construction-cost-calculator.html">construction cost calculator</a> for a quick estimate, or get a realistic range for your plot on the free 10-minute call.</p></details>
+      <details><summary>How much does it cost to build a house in Islamabad?</summary><p>It depends on plot size, covered area, your society's rules and the finish level you choose. Try our <a href="/cost-calculator">construction cost calculator</a> for a quick estimate, or get a realistic range for your plot on the free 10-minute call.</p></details>
       <details><summary>What is the difference between grey structure and turnkey construction?</summary><p>Grey structure is the foundation, columns, beams, slabs, brickwork, plaster and concealed pipes. Turnkey adds everything after that: flooring, doors and windows, bathrooms, kitchen, electrical fittings, paint and woodwork, so the house is ready to move into. We do both.</p></details>
       <details><summary>Which approvals do I need to build a house in Islamabad?</summary><p>Your building plan (the map) must be approved before construction starts, by the authority that governs your plot: CDA for sectors such as E, F, G and I, or the society itself in DHA, Bahria Town and most private housing schemes. When the house is finished you apply for a completion certificate. We prepare the drawings and handle the submission.</p></details>
       <details><summary>I live abroad. Can you build my house?</summary><p>Yes. One firm and one contract means one point of contact, and you can follow every stage of the build from wherever you are.</p></details>
+      <details><summary>Is DBCorp the same as D B Corp Ltd?</summary><p>No. DBCorp (Design Build Corporation) is a house design and construction firm based in Islamabad, Pakistan. It is not related to D B Corp Ltd, the Indian media company that publishes Dainik Bhaskar.</p></details>
       <details><summary>Do you work outside Islamabad?</summary><p>We're based in Islamabad and also build in Rawalpindi, Lahore and Karachi.</p></details>
     </div>
   </div>
@@ -702,9 +719,9 @@ footer{background:var(--stone);padding-block:64px 40px}
   <div class="wrap">
     <div class="foot">
       <div><a class="logo" href="#top"><img src="images/logo.svg" width="61" height="61" alt=""><span class="sr-only">DBCorp, home</span></a><p class="tag">We're building the next generation of homes in Pakistan.</p><p style="color:var(--muted);margin-top:14px;font-size:.92rem;max-width:44ch">DBCorp (Design Build Corporation) is a design-build firm in Islamabad, Pakistan. One team designs houses, gets them approved, builds them and finishes the interiors, in DHA, Bahria Town, CDA sectors, Gulberg Greens and B-17, and in Rawalpindi, Lahore and Karachi.</p></div>
-      <div><h4>Services</h4><ul><li><a href="#services">Architecture</a></li><li><a href="#services">Construction</a></li><li><a href="#services">Interiors</a></li><li><a href="#services">Renovation</a></li></ul></div>
-      <div><h4>Resources</h4><ul><li><a href="construction-cost-calculator.html">Cost calculator</a></li><li><a href="#how">How it works</a></li><li><a href="#stories">Client stories</a></li><li><a href="#guides">Free guides</a></li><li><a href="#faq">FAQ</a></li></ul></div>
-      <div><h4>Contact</h4><ul><li><span style="color:var(--muted);font-size:.85rem">Text or call</span></li><li>0313 555 8245</li><li><a href="https://www.instagram.com/dbcorp.pk/" target="_blank" rel="noopener">Instagram ↗</a></li></ul></div>
+      <div><h3>Services</h3><ul><li><a href="#services">Architecture</a></li><li><a href="#services">Construction</a></li><li><a href="#services">Interiors</a></li><li><a href="#services">Renovation</a></li></ul></div>
+      <div><h3>Resources</h3><ul><li><a href="/cost-calculator">Cost calculator</a></li><li><a href="#how">How it works</a></li><li><a href="#stories">Client stories</a></li><li><a href="#guides">Free guides</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+      <div><h3>Contact</h3><ul><li><span style="color:var(--muted);font-size:.85rem">Text or call</span></li><li>0313 555 8245</li><li><a href="https://www.instagram.com/dbcorp.pk/" target="_blank" rel="noopener">Instagram ↗</a></li></ul></div>
     </div>
     <div class="legal"><span>© 2026 DBCorp — Design Build Corporation</span><span>Drawn, checked and built by the same hands</span></div>
   </div>
@@ -755,14 +772,26 @@ const LEAD_ENDPOINT=""; // set to a Formspree / Google Apps Script URL at launch
 /* ---------- Hero photo: settles from a slight lean as you scroll, image drifts slower than the page ---------- */
 (()=>{const ph=document.querySelector('.hero .photo');if(!ph||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
   ph.classList.add('tilt');let goal=0,cur=null,raf=0;
-  const read=()=>{const r=ph.getBoundingClientRect(),vh=innerHeight;goal=Math.min(1,Math.max(0,(vh-r.top)/(vh*.8)))}; // 0 entering, 1 well in view
-  const tick=()=>{raf=0;cur=cur===null?goal:cur+(goal-cur)*.1; // soft follow, never a jump
-    const r=ph.getBoundingClientRect();
+  const tick=()=>{raf=0;
+    const r=ph.getBoundingClientRect(),vh=innerHeight;goal=Math.min(1,Math.max(0,(vh-r.top)/(vh*.8))); // 0 entering, 1 well in view
+    cur=cur===null?goal:cur+(goal-cur)*.1; // soft follow, never a jump
     ph.style.setProperty('--rx',((1-cur)*8).toFixed(2)+'deg');ph.style.setProperty('--s',(.96+.04*cur).toFixed(4));
     ph.style.setProperty('--sh',(1-cur).toFixed(3));ph.style.setProperty('--py',Math.max(-24,Math.min(24,r.top*-.05)).toFixed(1)+'px');
-    if(Math.abs(goal-cur)>.001)raf=requestAnimationFrame(tick)};
-  const kick=()=>{read();if(!raf)raf=requestAnimationFrame(tick)};
+    if(Math.abs(goal-cur)>.001&&!raf)raf=requestAnimationFrame(tick)};
+  const kick=()=>{if(!raf)raf=requestAnimationFrame(tick)};
   addEventListener('scroll',kick,{passive:true});addEventListener('resize',kick);kick()})();
+
+/* ---------- Hero video: the still shows at once; the right-sized film fades in after the page has loaded ---------- */
+(()=>{const v=document.getElementById('heroVideo');if(!v)return;
+  const net=navigator.connection||{};
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches||net.saveData||/2g/.test(net.effectiveType||''))return; // keep the still
+  const tall=matchMedia('(max-width:640px)').matches;
+  const av1=v.canPlayType('video/mp4; codecs="av01.0.08M.08"')!=='';
+  v.src='videos/hero-'+(tall?'portrait':'1080')+(av1?'-av1':'')+'.mp4';
+  v.addEventListener('playing',()=>v.classList.add('on'),{once:true});
+  let seen=true;const play=()=>{if(seen)v.play().catch(()=>{})};
+  if('IntersectionObserver' in window)new IntersectionObserver(e=>{seen=e[0].isIntersecting;seen?play():v.pause()}).observe(v); // pause off screen
+  if(document.readyState==='complete')play();else addEventListener('load',play,{once:true})})();
 
 /* ---------- Smooth anchor scrolling ---------- */
 (()=>{if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
@@ -815,7 +844,7 @@ function drawMap(){const L=MQ.matches?PTS.tall:PTS.wide,P=L.p;let legs='';
   jmap.innerHTML=`<svg viewBox="0 0 ${L.w} ${L.h}" preserveAspectRatio="none" aria-hidden="true">${legs}</svg>`+P.map(([x,y],i)=>{
     const nb=[P[i-1],P[i+1]].filter(Boolean),ny=nb.reduce((t,q)=>t+q[1],0)/nb.length;
     const side=MQ.matches?(x<L.w/2?'right':'left'):(y>=ny?'below':'above');
-    return `<button class="pin" style="left:${x/L.w*100}%;top:${y/L.h*100}%" aria-label="Step ${i+1}: ${S[i].n}">${i+1}<span class="pl ${side}" aria-hidden="true">${S[i].n}</span></button>`}).join('');
+    return `<button class="pin" style="left:${x/L.w*100}%;top:${y/L.h*100}%" >${i+1} <span class="pl ${side}">${S[i].n}</span></button>`}).join('');
   jmap.querySelectorAll('.pin').forEach((b,i)=>b.onclick=()=>showS(i));showS(si)}
 function showS(i){si=Math.max(0,Math.min(S.length-1,i));const s=S[si];
   jmap.querySelectorAll('.pin').forEach((b,j)=>{b.classList.toggle('done',j<si);if(j===si)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current')});
@@ -873,10 +902,16 @@ document.getElementById('mDownload').onclick=()=>{const ext=cur.k.includes('Exce
 const calWrap=document.getElementById('calWrap');
 function showCal(on){calWrap.hidden=!on;document.getElementById('bookForm').hidden=on;document.getElementById('bookDone').hidden=true}
 if(CALENDLY_URL){
-  const sc=document.createElement('script');sc.src='https://assets.calendly.com/assets/external/widget.js';sc.async=true;
-  sc.onload=()=>Calendly.initInlineWidget({url:CALENDLY_URL+(CALENDLY_URL.includes('?')?'&':'?')+'hide_gdpr_banner=1',parentElement:document.getElementById('calendly')});
-  sc.onerror=()=>showCal(false);
-  document.head.appendChild(sc);
+  // Calendly weighs ~3 MB, so it loads only when the visitor nears the booking section or heads for it
+  let calLoaded=false;
+  const loadCal=()=>{if(calLoaded)return;calLoaded=true;
+    const sc=document.createElement('script');sc.src='https://assets.calendly.com/assets/external/widget.js';sc.async=true;
+    sc.onload=()=>Calendly.initInlineWidget({url:CALENDLY_URL+(CALENDLY_URL.includes('?')?'&':'?')+'hide_gdpr_banner=1',parentElement:document.getElementById('calendly')});
+    sc.onerror=()=>showCal(false);
+    document.head.appendChild(sc)};
+  if('IntersectionObserver' in window){const io=new IntersectionObserver(e=>{if(e.some(x=>x.isIntersecting)){loadCal();io.disconnect()}},{rootMargin:'1200px 0px'});io.observe(document.getElementById('book'))}else loadCal();
+  document.querySelectorAll('a[href="#calendar"]').forEach(a=>['pointerenter','focus','touchstart','click'].forEach(t=>a.addEventListener(t,loadCal,{passive:true,once:true})));
+  if(location.hash==='#calendar')loadCal();
   showCal(true);document.getElementById('toCalRow').hidden=false;
   document.getElementById('toWa').onclick=e=>{e.preventDefault();showCal(false)};
   document.getElementById('toCal').onclick=e=>{e.preventDefault();showCal(true)};

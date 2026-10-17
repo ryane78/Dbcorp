@@ -8,16 +8,50 @@
       "**/node_modules/**",
       "DBCorp-rate-tracker.xlsx",
       "Untitled_HDR-2 copy.jpg",
-      "images/*-old.*"
+      "images/*-old.*",
+      "**/*.mov"
     ],
     "headers": [
       {
+        "source": "/videos/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=2592000"
+          }
+        ]
+      },
+      {
         "source": "**/*.@(jpg|jpeg|png|svg|webp)",
-        "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000" }]
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=2592000"
+          }
+        ]
       },
       {
         "source": "**/*.@(html|js|txt|xml)",
-        "headers": [{ "key": "Cache-Control", "value": "public, max-age=300" }]
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=300"
+          }
+        ]
+      }
+    ],
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "redirects": [
+      {
+        "source": "/construction-cost-calculator",
+        "destination": "/cost-calculator",
+        "type": 301
+      },
+      {
+        "source": "/construction-cost-calculator.html",
+        "destination": "/cost-calculator",
+        "type": 301
       }
     ]
   }

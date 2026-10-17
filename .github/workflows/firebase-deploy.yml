@@ -21,4 +21,4 @@ jobs:
         run: |
           curl -s -o /dev/null -w "IndexNow: %{http_code}\n" -X POST https://api.indexnow.org/indexnow \
             -H "Content-Type: application/json; charset=utf-8" \
-            -d '{"host":"dbcorp.pk","key":"792e47bee113bb3433fdb5669855c5c5","keyLocation":"https://dbcorp.pk/792e47bee113bb3433fdb5669855c5c5.txt","urlList":["https://dbcorp.pk/","https://dbcorp.pk/construction-cost-calculator.html"]}'
+            -d '{"host":"dbcorp.pk","key":"792e47bee113bb3433fdb5669855c5c5","keyLocation":"https://dbcorp.pk/792e47bee113bb3433fdb5669855c5c5.txt","urlList":["https://dbcorp.pk/","https://dbcorp.pk/cost-calculator"]}'

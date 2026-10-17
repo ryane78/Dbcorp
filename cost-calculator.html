@@ -5,23 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>House Construction Cost Calculator Islamabad 2026 | DBCorp</title>
 <meta name="description" content="Estimate the cost to build a house in Islamabad, Rawalpindi, Lahore or Karachi from your plot size, floors, basement and finish level. Free, instant, with a realistic price range and cost per sq ft.">
-<link rel="canonical" href="https://dbcorp.pk/construction-cost-calculator.html">
+<link rel="canonical" href="https://dbcorp.pk/cost-calculator">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="geo.region" content="PK-IS"><meta name="geo.placename" content="Islamabad">
 <meta property="og:type" content="website"><meta property="og:site_name" content="DBCorp — Design Build Corporation">
 <meta property="og:title" content="House Construction Cost Calculator | DBCorp">
 <meta property="og:description" content="What will your house really cost to build? Plot, floors, basement and finish level, with a realistic price range.">
-<meta property="og:url" content="https://dbcorp.pk/construction-cost-calculator.html"><meta property="og:image" content="https://dbcorp.pk/images/hero.jpg">
+<meta property="og:url" content="https://dbcorp.pk/cost-calculator"><meta property="og:image" content="https://dbcorp.pk/images/hero.jpg">
 <meta property="og:locale" content="en_PK"><meta property="og:image:alt" content="A newly built two-storey brick home in Islamabad by DBCorp"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
 <link rel="icon" href="images/favicon-32.png?v=2" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png?v=2">
 <meta name="theme-color" content="#FFFFFF">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@400;500&display=swap">
+<link rel="preload" href="fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+/* fonts are served from this site, so text never waits on a third-party server */
+@font-face{font-family:"Inter Tight";font-style:normal;font-weight:400 600;font-display:swap;src:url(fonts/inter-tight-latin.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:400 500;font-display:swap;src:url(fonts/inter-latin.woff2) format("woff2")}
 :root{
   color-scheme:light;
   --bg:#FFFFFF; --stone:#F4F2EE; --stone-2:#EBE7E0; --ink:#111111; --muted:#6B6A66; --line:#E4E0D9;
@@ -157,7 +159,7 @@ input:focus,select:focus{outline:2px solid var(--ink);outline-offset:0}
 /* footer */
 footer{background:var(--stone);padding-block:64px 40px}
 .foot{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:32px}
-.foot h4{font-size:.85rem;font-weight:500;color:var(--muted);margin:0 0 14px}
+.foot h3{font-family:var(--body);font-size:.85rem;font-weight:500;letter-spacing:0;line-height:1.4;color:var(--muted);margin:0 0 14px}
 .foot ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
 .foot a{text-decoration:none;font-size:.95rem}
 .foot a:hover{color:var(--muted)}
@@ -185,7 +187,7 @@ footer{background:var(--stone);padding-block:64px 40px}
 </style>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"House Construction Cost Calculator","url":"https://dbcorp.pk/construction-cost-calculator.html",
+{"@context":"https://schema.org","@type":"WebApplication","name":"House Construction Cost Calculator","url":"https://dbcorp.pk/cost-calculator",
  "applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"PKR"},
  "description":"Estimate the cost to build a house in Pakistan from plot size, location, floors, basement and finish level.",
  "provider":{"@type":"GeneralContractor","name":"DBCorp — Design Build Corporation","url":"https://dbcorp.pk/"}}
@@ -253,7 +255,7 @@ footer{background:var(--stone);padding-block:64px 40px}
    "@type": "ListItem",
    "position": 2,
    "name": "Construction cost calculator",
-   "item": "https://dbcorp.pk/construction-cost-calculator.html"
+   "item": "https://dbcorp.pk/cost-calculator"
   }
  ]
 }
@@ -264,15 +266,15 @@ footer{background:var(--stone);padding-block:64px 40px}
 <body>
 <header class="nav">
   <div class="wrap">
-    <a class="logo" href="index.html"><img src="images/logo.svg" width="61" height="61" alt=""><span class="sr-only">DBCorp, home</span></a>
+    <a class="logo" href="/"><img src="images/logo.svg" width="61" height="61" alt=""><span class="sr-only">DBCorp, home</span></a>
     <ul id="menu">
-      <li><a href="index.html#services">Services</a></li>
-      <li><a href="index.html#how">How it works</a></li>
-      <li><a href="construction-cost-calculator.html" aria-current="page">Cost calculator</a></li>
-      <li><a href="index.html#guides">Free guides</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#how">How it works</a></li>
+      <li><a href="/cost-calculator" aria-current="page">Cost calculator</a></li>
+      <li><a href="/#guides">Free guides</a></li>
     </ul>
     <div class="right">
-      <a class="btn small" href="index.html#calendar">Book a call</a>
+      <a class="btn small" href="/#calendar">Book a call</a>
       <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Menu</button>
     </div>
   </div>
@@ -348,7 +350,7 @@ footer{background:var(--stone);padding-block:64px 40px}
   </div>
 
   <section class="faqs" aria-labelledby="faqH">
-    <div style="display:grid;gap:18px;align-content:start"><h2 id="faqH">Questions about building costs</h2><p class="sub">Anything else, ask us on the <a href="index.html#calendar">free 10-minute call</a>.</p></div>
+    <div style="display:grid;gap:18px;align-content:start"><h2 id="faqH">Questions about building costs</h2><p class="sub">Anything else, ask us on the <a href="/#calendar">free 10-minute call</a>.</p></div>
     <div>
       <details open><summary>How accurate is this calculator?</summary><p>It works out your covered area from the plot and floors, prices the grey structure from material quantities and current market rates, and prices finishing by level. Expect a real quote to land inside the range shown. Only a drawing-based quote gives an exact number.</p></details>
       <details><summary>What is the difference between grey structure and complete?</summary><p>Grey structure is the foundation, columns, beams, slabs, brickwork, plaster and concealed pipes. Complete adds flooring, doors, windows, bathrooms, kitchen, electrical fittings, paint and woodwork.</p></details>
@@ -362,10 +364,10 @@ footer{background:var(--stone);padding-block:64px 40px}
 <footer>
   <div class="wrap">
     <div class="foot">
-      <div><a class="logo" href="index.html"><img src="images/logo.svg" width="61" height="61" alt=""><span class="sr-only">DBCorp, home</span></a><p class="tag">We're building the next generation of homes in Pakistan.</p><p style="color:var(--muted);margin-top:14px;font-size:.92rem">Designed and built in Islamabad.</p></div>
-      <div><h4>Services</h4><ul><li><a href="index.html#services">Architecture</a></li><li><a href="index.html#services">Construction</a></li><li><a href="index.html#services">Interiors</a></li><li><a href="index.html#services">Renovation</a></li></ul></div>
-      <div><h4>Resources</h4><ul><li><a href="construction-cost-calculator.html">Cost calculator</a></li><li><a href="index.html#how">How it works</a></li><li><a href="index.html#guides">Free guides</a></li><li><a href="index.html#faq">FAQ</a></li></ul></div>
-      <div><h4>Contact</h4><ul><li><span style="color:var(--muted);font-size:.85rem">Text or call</span></li><li>0313 555 8245</li><li><a href="https://www.instagram.com/dbcorp.pk/" target="_blank" rel="noopener">Instagram ↗</a></li></ul></div>
+      <div><a class="logo" href="/"><img src="images/logo.svg" width="61" height="61" alt=""><span class="sr-only">DBCorp, home</span></a><p class="tag">We're building the next generation of homes in Pakistan.</p><p style="color:var(--muted);margin-top:14px;font-size:.92rem">Designed and built in Islamabad.</p></div>
+      <div><h3>Services</h3><ul><li><a href="/#services">Architecture</a></li><li><a href="/#services">Construction</a></li><li><a href="/#services">Interiors</a></li><li><a href="/#services">Renovation</a></li></ul></div>
+      <div><h3>Resources</h3><ul><li><a href="/cost-calculator">Cost calculator</a></li><li><a href="/#how">How it works</a></li><li><a href="/#guides">Free guides</a></li><li><a href="/#faq">FAQ</a></li></ul></div>
+      <div><h3>Contact</h3><ul><li><span style="color:var(--muted);font-size:.85rem">Text or call</span></li><li>0313 555 8245</li><li><a href="https://www.instagram.com/dbcorp.pk/" target="_blank" rel="noopener">Instagram ↗</a></li></ul></div>
     </div>
     <div class="legal"><span>© 2026 DBCorp — Design Build Corporation</span><span>Drawn, checked and built by the same hands</span></div>
   </div>
@@ -376,7 +378,7 @@ footer{background:var(--stone);padding-block:64px 40px}
 /* All rates come from calculator-rates.js. Edit that file, not this one. */
 const R=window.RATES;
 const WA="923135558245";
-const LEAD_ENDPOINT=""; // same as index.html: set to a Formspree / Google Apps Script URL at launch
+const LEAD_ENDPOINT=""; // same as the home page: set to a Formspree / Google Apps Script URL at launch
 
 /* ---------- formatting ---------- */
 const nf=new Intl.NumberFormat('en-PK',{maximumFractionDigits:0});

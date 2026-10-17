@@ -4,6 +4,8 @@
 
 ## Key facts
 
+- Not to be confused with: D B Corp Ltd, the Indian media company (Dainik Bhaskar). DBCorp in Pakistan is a separate, unrelated business.
+
 - Name: DBCorp (Design Build Corporation)
 - Based in: Islamabad, Pakistan
 - Builds in: DHA Islamabad, Bahria Town Islamabad/Rawalpindi, CDA sectors (D, E, F, G, I), Gulberg Greens, B-17 Multi Gardens, Rawalpindi, Lahore and Karachi
@@ -34,4 +36,4 @@
 ## Pages
 
 - [Home](https://dbcorp.pk/): services, process, client stories, free guides and FAQ
-- [House construction cost calculator](https://dbcorp.pk/construction-cost-calculator.html): estimate the cost of building a house in Islamabad, Rawalpindi, Lahore or Karachi from plot size, location, floors, basement and finishing level
+- [House construction cost calculator](https://dbcorp.pk/cost-calculator): estimate the cost of building a house in Islamabad, Rawalpindi, Lahore or Karachi from plot size, location, floors, basement and finishing level
