@@ -94,7 +94,7 @@ footer .logo img{width:48px;height:48px}
 .hero .photo.tilt{transform-origin:50% 100%;transform:rotateX(var(--rx,0deg)) scale(var(--s,1));will-change:transform;
   box-shadow:0 calc(var(--sh,0) * 30px) calc(var(--sh,0) * 60px) calc(var(--sh,0) * -24px) rgba(0,0,0,.25)}
 .hero .photo.tilt img,.hero .photo.tilt video{transform:scale(1.1) translate3d(0,var(--py,0px),0);will-change:transform}
-.hero .photo video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .9s ease}
+.hero .photo video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
 .hero .photo video.on{opacity:1}
 
 /* section heads + features */
@@ -788,8 +788,12 @@ const LEAD_ENDPOINT=""; // set to a Formspree / Google Apps Script URL at launch
   const tall=matchMedia('(max-width:640px)').matches;
   const av1=v.canPlayType('video/mp4; codecs="av01.0.08M.08"')!=='';
   v.src='videos/hero-'+(tall?'portrait':'1080')+(av1?'-av1':'')+'.mp4';
-  v.addEventListener('playing',()=>v.classList.add('on'),{once:true});
+  v.addEventListener('playing',()=>v.classList.add('on'));
+  // seamless loop: dip to the opening still just before the end, fade back in as it restarts
+  v.addEventListener('timeupdate',()=>{if(v.duration)v.classList.toggle('on',v.currentTime<v.duration-.7)});
+  v.addEventListener('ended',()=>{v.currentTime=0;v.play().catch(()=>{})}); // safety net if a browser ignores loop
   let seen=true;const play=()=>{if(seen)v.play().catch(()=>{})};
+  ['touchstart','pointerdown','scroll','keydown'].forEach(t=>addEventListener(t,play,{once:true,passive:true})); // Low Power Mode blocks autoplay until the first interaction
   if('IntersectionObserver' in window)new IntersectionObserver(e=>{seen=e[0].isIntersecting;seen?play():v.pause()}).observe(v); // pause off screen
   if(document.readyState==='complete')play();else addEventListener('load',play,{once:true})})();
 
