@@ -1,0 +1,24 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      ".firebaserc",
+      "**/.*",
+      "**/node_modules/**",
+      "DBCorp-rate-tracker.xlsx",
+      "Untitled_HDR-2 copy.jpg",
+      "images/*-old.*"
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(jpg|jpeg|png|svg|webp)",
+        "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000" }]
+      },
+      {
+        "source": "**/*.@(html|js|txt|xml)",
+        "headers": [{ "key": "Cache-Control", "value": "public, max-age=300" }]
+      }
+    ]
+  }
+}

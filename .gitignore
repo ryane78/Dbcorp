@@ -2,3 +2,7 @@
 # internal working files, not part of the website
 DBCorp-rate-tracker.xlsx
 Untitled_HDR-2 copy.jpg
+# Firebase keys: these go in GitHub secrets, never in the repo
+*firebase-adminsdk*.json
+*service-account*.json
+.firebase/
