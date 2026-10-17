@@ -40,9 +40,18 @@
         ]
       }
     ],
-    "cleanUrls": true,
     "trailingSlash": false,
     "redirects": [
+      {
+        "source": "/index.html",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/cost-calculator.html",
+        "destination": "/cost-calculator",
+        "type": 301
+      },
       {
         "source": "/construction-cost-calculator",
         "destination": "/cost-calculator",
@@ -52,6 +61,12 @@
         "source": "/construction-cost-calculator.html",
         "destination": "/cost-calculator",
         "type": 301
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/cost-calculator",
+        "destination": "/cost-calculator.html"
       }
     ]
   }
