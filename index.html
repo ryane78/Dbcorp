@@ -177,19 +177,16 @@ footer .logo img{width:48px;height:48px}
 
 /* guides */
 .guides{background:var(--stone)}
-.g-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,24px)}
-@media (max-width:960px){.g-grid{grid-template-columns:1fr 1fr}}
-@media (max-width:600px){.g-grid{grid-template-columns:1fr}}
-.g{background:#fff;border-radius:var(--r);padding:14px 14px 22px;display:grid;gap:14px;grid-template-rows:auto auto 1fr auto}
-.g .cover{aspect-ratio:3/2;border-radius:12px;background:var(--stone);display:grid;place-items:center;overflow:hidden}
-.g .doc{width:42%;aspect-ratio:1/1.414;background:#fff;border-radius:4px;box-shadow:0 10px 24px rgba(0,0,0,.08);padding:12% 10%;display:grid;align-content:space-between}
-.g .doc b{font-family:var(--head);font-weight:600;font-size:.72rem;line-height:1.15;letter-spacing:-.01em}
-.g .doc i{display:block;height:3px;background:var(--stone-2);border-radius:2px;margin-top:4px}
-.g .doc small{font-size:.5rem;color:var(--muted);letter-spacing:.04em}
-.g .meta{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);padding-inline:8px}
-.g .body{display:grid;gap:6px;padding-inline:8px;align-content:start}
-.g .body p{color:var(--muted);font-size:.95rem}
-.g .btn{margin-inline:8px;justify-self:start}
+.gf{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center;max-width:1040px;margin-inline:auto;background:#fff;border-radius:var(--r);padding:clamp(24px,4vw,56px)}
+@media (max-width:760px){.gf{grid-template-columns:1fr}.gf-cover{max-width:220px}}
+.gf-cover{display:block;border-radius:10px;overflow:hidden;box-shadow:0 30px 60px -28px rgba(0,0,0,.45);transition:transform .6s cubic-bezier(.22,1,.36,1),box-shadow .6s cubic-bezier(.22,1,.36,1);max-width:380px;justify-self:center;width:100%}
+.gf-cover img{display:block;width:100%;height:auto}
+@media (hover:hover){.gf-cover:hover{transform:translateY(-6px) rotate(-1deg);box-shadow:0 40px 70px -30px rgba(0,0,0,.5)}}
+.gf-body{display:grid;gap:16px;align-content:start}
+.gf-kicker{font-size:.85rem;color:var(--muted)}
+.gf h3{font-size:clamp(1.6rem,2.8vw,2.2rem);letter-spacing:-.02em;line-height:1.1}
+.gf-lede{color:var(--muted);font-size:1.04rem;max-width:44ch}
+.gf .btn{justify-self:start;margin-top:6px}
 
 /* faq */
 .faq{display:grid;grid-template-columns:1fr 1.5fr;gap:clamp(32px,6vw,96px)}
@@ -527,7 +524,7 @@ footer{background:var(--stone);padding-block:64px 40px}
       <li><a href="#how">How it works</a></li>
       <li><a href="#stories">Clients</a></li>
       <li><a href="/cost-calculator">Cost calculator</a></li>
-      <li><a href="#guides">Free guides</a></li>
+      <li><a href="#guides">Free guide</a></li>
     </ul>
     <div class="right">
       <a class="btn small" href="#calendar">Book a call</a>
@@ -625,14 +622,25 @@ footer{background:var(--stone);padding-block:64px 40px}
 <section id="guides" class="guides">
   <div class="wrap">
     <div class="head">
-      <h2>Free guides for building in Islamabad.</h2>
-      <p class="sub center">Checklists and rule books we wish every client had before they called us. Free to use, whether or not you build with us.</p>
+      <h2>A free guide to building your home.</h2>
+      <p class="sub center">What happens, in what order, and what to check. Written for homeowners, and free whether or not you build with us.</p>
     </div>
-    <div class="g-grid" id="gGrid">
-      <article class="g"><div class="body"><h3>Before You Build</h3><p>The decisions to settle before you meet any architect, so the first meeting moves your house forward.</p></div></article>
-      <article class="g"><div class="body"><h3>Islamabad Layout Guide</h3><p>What realistically fits on a 5 marla, 10 marla and 1 kanal plot, with sample layouts.</p></div></article>
-      <article class="g"><div class="body"><h3>Material Grades Rulebook</h3><p>Steel, cement, bricks and concrete: what the grades mean and what to check on site.</p></div></article>
-    </div>
+    <article class="gf" id="gGrid">
+      <a class="gf-cover" href="/guides/home-building-guide.pdf" download data-guide="home-building-guide" aria-label="Download the guide (PDF)"><img src="/guides/home-building-guide-cover.webp" width="720" height="1019" alt="Cover of the DBCorp guide: Building your home in 6 simple steps" loading="lazy"></a>
+      <div class="gf-body">
+        <p class="gf-kicker">Homeowner's guide · PDF · 12 pages · Free</p>
+        <h3>Building your home in 6 simple steps</h3>
+        <p class="gf-lede">What happens, in what order, and what to check, so you can build with confidence.</p>
+        <ul class="checks">
+          <li>The 6 stages from approvals to move-in, with typical timings</li>
+          <li>A checklist to sign off before every next stage</li>
+          <li>A stage-by-stage payment schedule for your contractor</li>
+          <li>8 warning signs to look for on site visits</li>
+          <li>The site words you'll hear, explained in plain English</li>
+        </ul>
+        <a class="btn" href="/guides/home-building-guide.pdf" download data-guide="home-building-guide">Download the free guide</a>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -720,7 +728,7 @@ footer{background:var(--stone);padding-block:64px 40px}
     <div class="foot">
       <div><a class="logo" href="#top"><img src="images/logo.svg" width="61" height="61" alt=""><span class="sr-only">DBCorp, home</span></a><p class="tag">We're building the next generation of homes in Pakistan.</p><p style="color:var(--muted);margin-top:14px;font-size:.92rem;max-width:44ch">DBCorp (Design Build Corporation) is a design-build firm in Islamabad, Pakistan. One team designs houses, gets them approved, builds them and finishes the interiors, in DHA, Bahria Town, CDA sectors, Gulberg Greens and B-17, and in Rawalpindi, Lahore and Karachi.</p></div>
       <div><h3>Services</h3><ul><li><a href="#services">Architecture</a></li><li><a href="#services">Construction</a></li><li><a href="#services">Interiors</a></li><li><a href="#services">Renovation</a></li></ul></div>
-      <div><h3>Resources</h3><ul><li><a href="/cost-calculator">Cost calculator</a></li><li><a href="#how">How it works</a></li><li><a href="#stories">Client stories</a></li><li><a href="#guides">Free guides</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+      <div><h3>Resources</h3><ul><li><a href="/cost-calculator">Cost calculator</a></li><li><a href="#how">How it works</a></li><li><a href="#stories">Client stories</a></li><li><a href="#guides">Free guide</a></li><li><a href="#faq">FAQ</a></li></ul></div>
       <div><h3>Contact</h3><ul><li><span style="color:var(--muted);font-size:.85rem">Text or call</span></li><li>0313 555 8245</li><li><a href="https://www.instagram.com/dbcorp.pk/" target="_blank" rel="noopener">Instagram ↗</a></li></ul></div>
     </div>
     <div class="legal"><span>© 2026 DBCorp — Design Build Corporation</span><span>Drawn, checked and built by the same hands</span></div>
@@ -735,9 +743,9 @@ footer{background:var(--stone);padding-block:64px 40px}
     <div class="bars"><i class="on"></i><i id="bar2"></i></div>
     <div id="m1">
       <form id="dForm" novalidate>
-        <p style="color:var(--muted);font-size:.95rem">Tell us where to send a copy. Your download starts straight away.</p>
+        <p style="color:var(--muted);font-size:.95rem">Tell us a little about you, then download straight away.</p>
         <div class="field"><label for="d-name">Your name</label><input id="d-name" autocomplete="name"></div>
-        <div class="field"><label for="d-contact">Email or WhatsApp number</label><input id="d-contact"><span class="hint">A copy goes here, plus the occasional building tip. Nothing else.</span></div>
+        <div class="field"><label for="d-contact">Email or WhatsApp number</label><input id="d-contact"><span class="hint">Only for the occasional building tip, if you tick the box below. Nothing else.</span></div>
         <div class="field"><label for="d-stage">Where are you in your build?</label><select id="d-stage"><option>Planning to build this year</option><option>Planning to build next year</option><option>Construction already started</option><option>Just learning</option></select></div>
         <label class="check"><input type="checkbox" id="d-ok" checked> Send me DBCorp's building tips. Unsubscribe any time.</label>
         <p class="err" id="dErr" hidden>Add your name and an email or WhatsApp number.</p>
@@ -749,7 +757,6 @@ footer{background:var(--stone);padding-block:64px 40px}
       <h3 style="font-size:1.4rem">Your guide is ready.</h3>
       <p style="color:var(--muted)" id="mDone">Download it now.</p>
       <button class="btn" id="mDownload">Download PDF</button>
-      <p class="note" id="mPrev" hidden>Preview only: on the live site this button downloads the file.</p>
       <div style="border-top:1px solid var(--line);padding-top:16px;display:grid;gap:10px">
         <p style="font-weight:500">Want us to apply it to your plot?</p>
         <a class="btn line small" href="#calendar" id="mBook" style="justify-self:start">Book a free call</a>
@@ -875,22 +882,15 @@ MQ.addEventListener('change',drawMap);drawMap();
     setTimeout(()=>items.forEach(d=>d.style.removeProperty('--d')),1500)}},{threshold:.1});io.observe(box)})();
 
 /* ---------- Free guides + download flow ---------- */
-const G=[
- {id:'before-you-build',t:'Before You Build',k:'Checklist · PDF',c:'plan',d:'The decisions to settle before you meet any architect, so the first meeting moves your house forward.'},
- {id:'islamabad-layout-guide',t:'Islamabad Layout Guide',k:'Guide · PDF',c:'design',d:'What realistically fits on a 5 marla, 10 marla and 1 kanal plot, with sample layouts.'},
- {id:'material-grades-rulebook',t:'Material Grades Rulebook',k:'Rule book · PDF',c:'build',d:'Steel, cement, bricks and concrete: what the grades mean and what to check on site.'}
-];
-const gGrid=document.getElementById('gGrid');gGrid.innerHTML=''; // replace the plain fallback cards
-G.forEach(g=>{const el=document.createElement('article');el.className='g';el.dataset.c=g.c;
-  el.innerHTML=`<div class="cover"><div class="doc"><b>${g.t}</b><div><i></i><i style="width:70%"></i><i style="width:85%"></i></div><small>DBCORP</small></div></div>
-   <div class="meta"><span>${g.k}</span><span>Free</span></div><div class="body"><h3>${g.t}</h3><p>${g.d}</p></div>
-   <button class="btn small" data-id="${g.id}">Download free</button>`;gGrid.appendChild(el)});
+const G=[{id:'home-building-guide',t:'Building your home in 6 simple steps',k:"Homeowner's guide · PDF",file:'/guides/home-building-guide.pdf'}];
+const gGrid=document.getElementById('gGrid');
 const modal=document.getElementById('modal');let cur=null,last=null;
 function openM(g){cur=g;last=document.activeElement;document.getElementById('mTitle').textContent=g.t;document.getElementById('mKind').textContent=g.k;
   document.getElementById('m1').hidden=false;document.getElementById('m2').hidden=true;document.getElementById('bar2').classList.remove('on');document.getElementById('dErr').hidden=true;
-  document.getElementById('mDownload').textContent=g.k.includes('Excel')?'Download worksheet':'Download PDF';modal.hidden=false;setTimeout(()=>document.getElementById('d-name').focus(),30)}
+  modal.hidden=false;setTimeout(()=>document.getElementById('d-name').focus(),30)}
 function closeM(){modal.hidden=true;last&&last.focus()}
-gGrid.addEventListener('click',e=>{const b=e.target.closest('button[data-id]');if(b)openM(G.find(g=>g.id===b.dataset.id))});
+// with a lead endpoint connected, ask for details first; without one, the link simply downloads the PDF
+gGrid.addEventListener('click',e=>{const a=e.target.closest('a[data-guide]');if(a&&LEAD_ENDPOINT){e.preventDefault();openM(G.find(g=>g.id===a.dataset.guide))}});
 document.getElementById('mClose').onclick=closeM;modal.addEventListener('click',e=>{if(e.target===modal)closeM()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!modal.hidden)closeM()});document.getElementById('mBook').onclick=closeM;
 document.getElementById('dForm').addEventListener('submit',e=>{e.preventDefault();
@@ -899,8 +899,8 @@ document.getElementById('dForm').addEventListener('submit',e=>{e.preventDefault(
   const lead={type:'download',guide:cur.id,name:n,contact:c,stage:document.getElementById('d-stage').value,optIn:document.getElementById('d-ok').checked,at:new Date().toISOString()};
   if(LEAD_ENDPOINT)fetch(LEAD_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(lead)}).catch(()=>{});
   document.getElementById('m1').hidden=true;document.getElementById('m2').hidden=false;document.getElementById('bar2').classList.add('on');
-  document.getElementById('mDone').textContent=`Thanks, ${n.split(' ')[0]}. Download it now. A copy will also go to ${c}.`;document.getElementById('mPrev').hidden=true});
-document.getElementById('mDownload').onclick=()=>{const ext=cur.k.includes('Excel')?'xlsx':'pdf';if(LEAD_ENDPOINT)location.href='/downloads/'+cur.id+'.'+ext;else document.getElementById('mPrev').hidden=false};
+  document.getElementById('mDone').textContent=`Thanks, ${n.split(' ')[0]}. Your guide is ready.`});
+document.getElementById('mDownload').onclick=()=>{const a=document.createElement('a');a.href=cur.file;a.download='';document.body.appendChild(a);a.click();a.remove()};
 
 /* ---------- Book a call -> Calendly (falls back to WhatsApp) ---------- */
 const calWrap=document.getElementById('calWrap');
