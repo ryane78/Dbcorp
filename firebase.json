@@ -56,6 +56,15 @@
             "value": "public, max-age=300"
           }
         ]
+      },
+      {
+        "source": "/guide",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=300"
+          }
+        ]
       }
     ],
     "trailingSlash": false,
@@ -79,12 +88,21 @@
         "source": "/construction-cost-calculator.html",
         "destination": "/cost-calculator",
         "type": 301
+      },
+      {
+        "source": "/guide.html",
+        "destination": "/guide",
+        "type": 301
       }
     ],
     "rewrites": [
       {
         "source": "/cost-calculator",
         "destination": "/cost-calculator.html"
+      },
+      {
+        "source": "/guide",
+        "destination": "/guide.html"
       }
     ]
   }
