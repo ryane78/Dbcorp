@@ -19,6 +19,7 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_DBUILDCORP_A6A7A }}
           channelId: live
           projectId: dbuildcorp-a6a7a
+          firebaseToolsVersion: 15.34.0  # pinned: 15.34.1 (21 Oct 2026) broke deploys
       # Tell Bing (ChatGPT search, Copilot), Yandex and other IndexNow engines the pages changed
       - name: Ping IndexNow
         run: |

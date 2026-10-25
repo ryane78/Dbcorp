@@ -23,3 +23,4 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_DBUILDCORP_A6A7A }}
           expires: 7d
           projectId: dbuildcorp-a6a7a
+          firebaseToolsVersion: 15.34.0  # pinned: 15.34.1 (21 Oct 2026) broke deploys
